@@ -1,3 +1,12 @@
+* {
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -52,12 +61,18 @@ main {
   flex-wrap: 1rem;
 }
 
-#topHeader {
+#headerNav {
   background-color: #3c3a39;
 }
 
-#headerNav {
-  background-color: #3c3a39;
+#logo {
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+  transition: all 300ms ease-in-out;
+}
+
+#logo:hover {
+  color: white;
 }
 
 #headerNav p,
@@ -70,15 +85,15 @@ main {
 #main {
   height: 100%;
   width: 100vw;
-  background-color: #1c1a19;
 }
 
 #BG {
   position: absolute;
   right: 0;
-  bottom: 0.5rem;
-  user-select: none;
+  top: 0;
   z-index: -1;
+  background-color: #1c1a19;
+  padding: 50vh 0 5vh 100vw;
 }
 
 #mainCont {
@@ -117,7 +132,6 @@ main {
   width: 100%;
   padding-left: 0.3rem;
   z-index: 2;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {

@@ -77,6 +77,8 @@ main {
   position: absolute;
   right: 0;
   bottom: 0.5rem;
+  user-select: none;
+  z-index: -1;
 }
 
 #mainCont {
@@ -91,7 +93,7 @@ main {
   font-family: "Crete Round", serif;
   color: #ff6b00;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 55px;
   line-height: 64px;
   letter-spacing: 0.37px;
   margin-top: 1rem;
@@ -114,6 +116,8 @@ main {
   display: flex;
   width: 100%;
   padding-left: 0.3rem;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {

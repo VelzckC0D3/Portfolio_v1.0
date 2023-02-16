@@ -4,7 +4,7 @@
   scrollbar-width: none;
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   display: none;
 }
 
@@ -93,10 +93,10 @@ main {
   height: 100vh;
   width: 100vw;
   background-color: #1c1a19;
-  background-image: url(BG.svg);
+  background-image: url(img/BG.svg);
   background-repeat: no-repeat;
   background-size: 13rem;
-  background-position: right bottom;
+  background-position: right 17rem;
 }
 
 #mainCont {

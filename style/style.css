@@ -1,6 +1,11 @@
 * {
   list-style: none;
   -webkit-tap-highlight-color: transparent;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar{
+  display: none;
 }
 
 html {
@@ -13,10 +18,13 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  overflow-x: hidden;
+  min-width: 100vw;
 }
 
 header {
   color: rgb(255, 255, 255);
+  max-width: 100vw;
 }
 
 main {
@@ -43,7 +51,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 95vh;
 }
 
 #header {
@@ -83,11 +90,12 @@ main {
 }
 
 #main {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   background-color: #1c1a19;
   background-image: url(BG.svg);
   background-repeat: no-repeat;
+  background-size: 13rem;
   background-position: right bottom;
 }
 

@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Microverse Hello Wolrd] <a name="about-project"></a>
+# 📖 [My Portfolio] <a name="about-project"></a>
 
-**[Microverse Hello Wolrd]** Is a project were I was able to learn about how to do a proper GitFlow, also I learned a lot about Linters
+**[My Portfolio]** Here you have the Portfolio project, were I was able to learn how to properly apply the Mobile First method and also a proper GitFlow
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -60,7 +60,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[It kindly greet you]**
+- **[Easy to navigate]**
+- **[Mobile First Focus]**
 - **[It is well designed]**
 - **[It shows the proper GitFlow]**
 
@@ -70,7 +71,10 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-![preview](https://user-images.githubusercontent.com/92229666/218864071-c7148bf9-4693-46ee-a147-6e1dfd85d1f3.gif)
+[Click here to visit the Live Demo](https://velzckcode.netlify.app)
+\
+\
+ ![Portfolio-Demo](https://user-images.githubusercontent.com/92229666/219415239-b2b42453-78c8-475a-a57f-23e3ffb283e6.gif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,8 +154,8 @@ Your software of preference
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[CSS Animations and Transitions]**
-- [ ] **[Linting tools to improve the functioning of the website and optimize it]**
-- [ ] **[Beatifull sober design]**
+- [ ] **[Easy user interface to navigate with]**
+- [ ] **[Complete, user friendly design, responsive and optimized]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,9 +193,9 @@ I would like to thanks my Microverse Team for helping me to get this done.
 
   - [only HTML and CSS]
 
-- **[How were you able to do the shine effect on the text?]**
+- **[How were you able to do the Icons hover effect?]**
 
-  - [Adding a white shadow on the ":hover" of the respective container]
+  - [It's a round solid border, with a transparent color that changes on a smooth transition to orange when you hover it.]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

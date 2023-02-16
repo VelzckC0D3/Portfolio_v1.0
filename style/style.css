@@ -92,6 +92,7 @@ main {
 #main {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
   background-color: #1c1a19;
   background-image: url(img/BG.svg);
   background-repeat: no-repeat;
@@ -111,11 +112,13 @@ main {
   font-family: "Crete Round", serif;
   color: #ff6b00;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.375rem;
   line-height: 64px;
   letter-spacing: 0.37px;
   margin-top: 1rem;
   margin-bottom: 0.75rem;
+  min-width: 21rem;
+  max-width: 21rem;
 }
 
 #mainCont h2 {
@@ -128,6 +131,7 @@ main {
   font-family: "Poppins", sans-serif;
   color: white;
   font-size: 1.05rem;
+  max-width: 29rem;
 }
 
 #mainIcons {
@@ -138,7 +142,7 @@ main {
 }
 
 .icon {
-  padding: 1rem 0.75rem;
+  padding: 1rem 0.5rem;
   transition: border-bottom 500ms ease-in-out;
   border-radius: 16rem;
   text-decoration: underline;

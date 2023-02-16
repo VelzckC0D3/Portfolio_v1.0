@@ -85,15 +85,10 @@ main {
 #main {
   height: 100%;
   width: 100vw;
-}
-
-#BG {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
   background-color: #1c1a19;
-  padding: 50vh 0 5vh 100vw;
+  background-image: url(BG.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 #mainCont {

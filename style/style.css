@@ -374,10 +374,12 @@ h2 {
   align-items: center;
   transition: all 300ms;
   cursor: pointer;
+  -webkit-text-stroke: 0.25px;
 }
 
 .gridButton:hover {
-  background-color: #ff6a00a8;
+  background-color: #ff6a00;
+  transform: scale(1.02);
 }
 
 /* SECONDARY CARDS */

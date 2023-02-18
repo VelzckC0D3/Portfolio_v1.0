@@ -1,3 +1,5 @@
+/* GLOBALS */
+
 * {
   list-style: none;
   -webkit-tap-highlight-color: transparent;
@@ -29,7 +31,10 @@ header {
 
 main {
   width: 100vw;
-  height: 100vh;
+}
+
+h2 {
+  font-weight: normal !important;
 }
 
 .roboto {
@@ -47,11 +52,23 @@ main {
     sans-serif;
 }
 
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+.creteRound {
+  font-family: "Crete Round", serif;
+}
+
 .flexColumn {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+/* GLOBALS */
+
+/* MAIN */
 
 #header {
   background-color: gray;
@@ -96,8 +113,10 @@ main {
   background-color: #1c1a19;
   background-image: url(img/BG.svg);
   background-repeat: no-repeat;
-  background-size: 13rem;
+  background-size: 10rem;
   background-position: right 17rem;
+  flex-wrap: nowrap;
+  border-bottom: 5px solid #ff6b00;
 }
 
 #mainCont {
@@ -108,8 +127,6 @@ main {
 }
 
 #mainCont h1 {
-  font-family: "Courier Prime", monospace;
-  font-family: "Crete Round", serif;
   color: #ff6b00;
   font-weight: 400;
   font-size: 3.375rem;
@@ -123,11 +140,10 @@ main {
 
 #mainCont h2 {
   color: white;
+  font-weight: bold;
 }
 
 #mainCont p {
-  font-family: "Courier Prime", monospace;
-  font-family: "Crete Round", serif;
   font-family: "Poppins", sans-serif;
   color: white;
   font-size: 1.05rem;
@@ -152,3 +168,357 @@ main {
 .icon:hover {
   border-bottom: 1px solid #ff6b00;
 }
+
+/* MAIN */
+
+/* WORKS */
+
+#works {
+  height: 100%;
+}
+
+#worksCont {
+  align-items: center;
+  height: 100%;
+  justify-content: normal;
+  padding: 5rem 1.4rem;
+}
+
+#worksTitle {
+  width: 100%;
+  text-transform: capitalize;
+  padding: 1.75rem 0 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+#worksTitle h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #1c1a19;
+}
+
+#worksGrid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  row-gap: 0.5rem;
+  padding-top: 5rem;
+}
+
+/* PRIMARY CARD */
+
+#pGridCont {
+  grid-area: auto;
+  border: 1px solid rgba(0, 0, 255, 0);
+}
+
+#pImgGrid {
+  height: 15.5rem;
+  display: flex;
+  flex-direction: column;
+  background-image: url(imgGrid/pGrid1.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#pGridTitle {
+  font-size: 1.3rem;
+  color: #091e42;
+}
+
+#pGridP {
+  font-size: 1.05rem;
+  color: #091e42;
+  margin: -0.75rem 0;
+}
+
+#pTechCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+#pTechCont ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+#pTechCont li {
+  font-weight: 500;
+  border: 1px solid #8993a4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  transition: all 300ms;
+}
+
+#pTechCont li:hover {
+  transform: scale(1.1);
+}
+
+.pTechLink:link {
+  text-decoration: none;
+  color: black;
+}
+
+#pTechCont a:visited {
+  color: #091e42;
+}
+
+#act {
+  background-color: #ff6a00;
+}
+
+#action {
+  padding: 6px 3px !important;
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#action:hover {
+  transform: scale(1.1);
+}
+
+#action:link {
+  text-decoration: none;
+  color: white !important;
+}
+
+#action:visited {
+  text-decoration: none;
+  color: white !important;
+}
+
+/* PRIMARY CARD */
+
+/* SECONDARY CARDS */
+
+.gridCont {
+  height: 25.5rem;
+  color: white;
+}
+
+.sGrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imgGrid {
+  height: 100%;
+  background-image: url(imgGrid/grid.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.gridPadding {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cardP {
+  line-height: 24px;
+}
+
+.projectN {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  margin: 0 0 -2.3rem;
+}
+
+.techCont {
+  height: 4rem;
+}
+
+.cardUl {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.cardLi {
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 0.6rem 0.5rem;
+  transition: all 300ms ease-in-out;
+  -webkit-text-stroke: 0.25px;
+}
+
+.cardLi:hover {
+  transform: scale(1.15);
+  background-color: rgba(255, 255, 255, 0.432);
+}
+
+.cardLink:link {
+  text-decoration: none;
+  color: white;
+}
+
+.cardLink:visited {
+  color: white;
+}
+
+.gridButton {
+  height: 3.05rem;
+  width: 100%;
+  background-color: #ff6b00;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms;
+  cursor: pointer;
+  -webkit-text-stroke: 0.25px;
+}
+
+.gridButton:hover {
+  background-color: #ff6a00;
+  transform: scale(1.02);
+}
+
+.gridLink:link {
+  text-decoration: none;
+  color: white;
+}
+
+.gridLink:visited {
+  text-decoration: none;
+  color: white;
+}
+
+/* SECONDARY CARDS */
+
+/* WORKS */
+
+/* ABOUT ME */
+
+#aboutMe {
+  padding-top: 2.5rem;
+  background-color: #1c1a19;
+  border-top: 5px solid #ff6b00;
+}
+
+#aboutMeCont {
+  background-color: #1c1a19;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(img/aboutMeBG.svg);
+  background-repeat: no-repeat;
+  background-position: right 23.5rem;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 37rem;
+  align-items: flex-start;
+  padding-top: 3.5rem;
+  border-bottom: 1px solid #fff;
+}
+
+#aboutTitle {
+  color: #ff6b00;
+  width: 100%;
+  height: 10rem;
+  font-size: 3rem;
+  font-weight: normal;
+  padding: 0;
+}
+
+#aboutText {
+  color: white;
+  width: 93%;
+  line-height: 24px;
+  font-size: 1rem;
+}
+
+#buttonCV {
+  width: 10.3rem;
+  font-weight: bold;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.77rem;
+  text-transform: capitalize;
+}
+
+#cvLink {
+  background-color: #ff6b00;
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 300ms ease-in-out;
+}
+
+#cvLink:link {
+  text-decoration: none;
+  color: white;
+}
+
+#cvLink:visited {
+  color: white;
+}
+
+#cvLink:hover {
+  transform: scale(1.05);
+}
+
+/* SKILLS */
+
+#aboutMeSkills {
+  padding: 7rem 0;
+  align-items: center;
+  color: white;
+}
+
+.skillsCont {
+  align-items: center;
+}
+
+.sTitle {
+  text-align: center;
+  width: 100%;
+  font-size: 1.3rem;
+  -webkit-text-stroke: 1px;
+}
+
+.skillsUl {
+  justify-content: center;
+  align-items: center;
+  list-style: circle;
+  transform: translateX(-1.25rem);
+}
+
+.skillsLi {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+/* SKILLS */
+
+/* ABOUT ME */

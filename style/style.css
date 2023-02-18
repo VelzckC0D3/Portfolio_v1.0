@@ -1,3 +1,5 @@
+/* GLOBALS */
+
 * {
   list-style: none;
   -webkit-tap-highlight-color: transparent;
@@ -29,7 +31,10 @@ header {
 
 main {
   width: 100vw;
-  height: 100vh;
+}
+
+h2 {
+  font-weight: normal;
 }
 
 .roboto {
@@ -47,11 +52,19 @@ main {
     sans-serif;
 }
 
+.creteRound {
+  font-family: "Crete Round", serif;
+}
+
 .flexColumn {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+/* GLOBALS */
+
+/* MAIN */
 
 #header {
   background-color: gray;
@@ -96,8 +109,10 @@ main {
   background-color: #1c1a19;
   background-image: url(img/BG.svg);
   background-repeat: no-repeat;
-  background-size: 13rem;
+  background-size: 10rem;
   background-position: right 17rem;
+  flex-wrap: nowrap;
+  border-bottom: 5px solid #ff6b00;
 }
 
 #mainCont {
@@ -108,8 +123,6 @@ main {
 }
 
 #mainCont h1 {
-  font-family: "Courier Prime", monospace;
-  font-family: "Crete Round", serif;
   color: #ff6b00;
   font-weight: 400;
   font-size: 3.375rem;
@@ -123,11 +136,10 @@ main {
 
 #mainCont h2 {
   color: white;
+  font-weight: bold;
 }
 
 #mainCont p {
-  font-family: "Courier Prime", monospace;
-  font-family: "Crete Round", serif;
   font-family: "Poppins", sans-serif;
   color: white;
   font-size: 1.05rem;
@@ -152,3 +164,122 @@ main {
 .icon:hover {
   border-bottom: 1px solid #ff6b00;
 }
+
+/* MAIN */
+
+/* WORKS */
+
+#works {
+  height: 100%;
+}
+
+#worksCont {
+  align-items: center;
+  height: 100%;
+  justify-content: normal;
+  padding: 5rem 1rem;
+}
+
+#worksTitle {
+  width: 100%;
+  background-color: antiquewhite;
+  text-transform: capitalize;
+  padding: 1.75rem 0 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+#worksTitle h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #1c1a19;
+}
+
+#worksGrid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  grid: 1fr repeat(6, 1fr) / 100%;
+  background-color: rgba(82, 82, 82, 0.206);
+  row-gap: 0.5rem;
+  padding-top: 5rem;
+}
+
+/* PRIMARY CARD */
+
+#pGridCont {
+  grid-area: auto;
+  border: 1px solid rgba(0, 0, 255, 0);
+}
+
+#pImgGrid {
+  height: 15.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.118);
+  background-image: url(imgGrid/grid1.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#pGridTitle {
+  font-size: 1.3rem;
+  color: #091e42;
+}
+
+#pGridP {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  color: #091e42;
+  margin: -0.75rem 0;
+}
+
+#pTechCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: flex-end;
+}
+
+#pTechCont ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+#pTechCont li {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #8993a4;
+}
+
+#pTechCont a:link {
+  text-decoration: none;
+}
+
+#pTechCont a:visited {
+  color: #091e42;
+}
+
+#action {
+  padding: 0.9rem 1rem !important;
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* PRIMARY CARD */
+
+/* SECONDARY CARDS */
+
+/* SECONDARY CARDS */
+
+/* WORKS */

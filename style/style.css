@@ -34,7 +34,7 @@ main {
 }
 
 h2 {
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 .roboto {
@@ -50,6 +50,10 @@ h2 {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
 }
 
 .creteRound {
@@ -177,12 +181,11 @@ h2 {
   align-items: center;
   height: 100%;
   justify-content: normal;
-  padding: 5rem 1rem;
+  padding: 5rem 1.4rem;
 }
 
 #worksTitle {
   width: 100%;
-  background-color: antiquewhite;
   text-transform: capitalize;
   padding: 1.75rem 0 0.5rem;
   border-bottom: 1px solid black;
@@ -199,8 +202,6 @@ h2 {
   height: 100%;
   width: 100%;
   justify-content: center;
-  grid: 1fr repeat(6, 1fr) / 100%;
-  background-color: rgba(82, 82, 82, 0.206);
   row-gap: 0.5rem;
   padding-top: 5rem;
 }
@@ -216,8 +217,7 @@ h2 {
   height: 15.5rem;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.118);
-  background-image: url(imgGrid/grid1.svg);
+  background-image: url(imgGrid/pGrid1.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -229,7 +229,6 @@ h2 {
 }
 
 #pGridP {
-  font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   color: #091e42;
   margin: -0.75rem 0;
@@ -252,13 +251,12 @@ h2 {
 }
 
 #pTechCont li {
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   padding: 0.5rem 0.8rem;
   border: 1px solid #8993a4;
 }
 
-#pTechCont a:link {
+.pTechLink:link {
   text-decoration: none;
 }
 
@@ -271,7 +269,6 @@ h2 {
   background-color: #ff6b00;
   color: white;
   border: none;
-  font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -279,6 +276,79 @@ h2 {
 /* PRIMARY CARD */
 
 /* SECONDARY CARDS */
+
+.gridCont {
+  height: 25.5rem;
+  color: white;
+}
+
+.sGrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imgGrid {
+  height: 100%;
+  background-image: url(imgGrid/grid.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.gridPadding {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cardP {
+  line-height: 24px;
+}
+
+.projectN {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  margin: 0 0 -2.3rem;
+}
+
+.techCont {
+  height: 4rem;
+}
+
+.cardUl {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.cardLi {
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 0.6rem 0.5rem;
+}
+
+.cardLink:link {
+  text-decoration: none;
+}
+
+.cardLink:visited {
+  color: white;
+}
+
+.gridFooter {
+  height: 3.05rem;
+  width: 100%;
+  background-color: #ff6b00;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* SECONDARY CARDS */
 

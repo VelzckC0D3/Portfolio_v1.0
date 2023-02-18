@@ -240,6 +240,7 @@ h2 {
   justify-content: flex-end;
   width: 100%;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 #pTechCont ul {
@@ -252,12 +253,21 @@ h2 {
 
 #pTechCont li {
   font-weight: 500;
-  padding: 0.5rem 0.8rem;
   border: 1px solid #8993a4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  transition: all 300ms;
+}
+
+#pTechCont li:hover {
+  transform: scale(1.1);
 }
 
 .pTechLink:link {
   text-decoration: none;
+  color: black;
 }
 
 #pTechCont a:visited {
@@ -271,6 +281,11 @@ h2 {
   border: none;
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+#action:hover {
+  transform: scale(1.1);
 }
 
 /* PRIMARY CARD */
@@ -325,22 +340,31 @@ h2 {
   margin: 0;
   padding: 0;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .cardLi {
   background-color: rgba(255, 255, 255, 0.24);
   padding: 0.6rem 0.5rem;
+  transition: all 300ms ease-in-out;
+  -webkit-text-stroke: 0.25px;
+}
+
+.cardLi:hover {
+  transform: scale(1.15);
+  background-color: rgba(255, 255, 255, 0.432);
 }
 
 .cardLink:link {
   text-decoration: none;
+  color: white;
 }
 
 .cardLink:visited {
   color: white;
 }
 
-.gridFooter {
+.gridButton {
   height: 3.05rem;
   width: 100%;
   background-color: #ff6b00;
@@ -348,8 +372,125 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.gridButton:hover {
+  background-color: #ff6a00a8;
 }
 
 /* SECONDARY CARDS */
 
 /* WORKS */
+
+/* ABOUT ME */
+
+#aboutMe {
+  padding-top: 2.5rem;
+  background-color: #1c1a19;
+  border-top: 5px solid #ff6b00;
+}
+
+#aboutMeCont {
+  background-color: #1c1a19;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(img/aboutMeBG.svg);
+  background-repeat: no-repeat;
+  background-position: right 23.5rem;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 37rem;
+  align-items: flex-start;
+  padding-top: 3.5rem;
+  border-bottom: 1px solid #fff;
+}
+
+#aboutTitle {
+  color: #ff6b00;
+  width: 100%;
+  height: 10rem;
+  font-size: 3rem;
+  font-weight: normal;
+  padding: 0;
+}
+
+#aboutText {
+  color: white;
+  width: 93%;
+  line-height: 24px;
+  font-size: 1rem;
+}
+
+#buttonCV {
+  width: 10.3rem;
+  font-weight: bold;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.77rem;
+  text-transform: capitalize;
+}
+
+#cvLink {
+  background-color: #ff6b00;
+  width: 10rem;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+#cvLink:link {
+  text-decoration: none;
+  color: white;
+}
+
+#cvLink:visited {
+  color: white;
+}
+
+#cvLink:hover {
+  transform: scale(1.05);
+}
+
+/* SKILLS */
+
+#aboutMeSkills {
+  padding: 7rem 0;
+  align-items: center;
+  color: white;
+}
+
+.skillsCont {
+  align-items: center;
+}
+
+.sTitle {
+  text-align: center;
+  width: 100%;
+  font-size: 1.3rem;
+  -webkit-text-stroke: 1px;
+}
+
+.skillsUl {
+  justify-content: center;
+  align-items: center;
+  list-style: circle;
+  transform: translateX(-1.25rem);
+}
+
+.skillsLi {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+/* SKILLS */
+
+/* ABOUT ME */

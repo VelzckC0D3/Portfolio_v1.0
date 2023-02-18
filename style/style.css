@@ -274,8 +274,12 @@ h2 {
   color: #091e42;
 }
 
+#act {
+  background-color: #ff6a00;
+}
+
 #action {
-  padding: 0.9rem 1rem !important;
+  padding: 6px 3px !important;
   background-color: #ff6b00;
   color: white;
   border: none;
@@ -286,6 +290,16 @@ h2 {
 
 #action:hover {
   transform: scale(1.1);
+}
+
+#action:link {
+  text-decoration: none;
+  color: white !important;
+}
+
+#action:visited {
+  text-decoration: none;
+  color: white !important;
 }
 
 /* PRIMARY CARD */
@@ -382,6 +396,16 @@ h2 {
   transform: scale(1.02);
 }
 
+.gridLink:link {
+  text-decoration: none;
+  color: white;
+}
+
+.gridLink:visited {
+  text-decoration: none;
+  color: white;
+}
+
 /* SECONDARY CARDS */
 
 /* WORKS */
@@ -444,7 +468,9 @@ h2 {
 #cvLink {
   background-color: #ff6b00;
   width: 10rem;
+  height: 3rem;
   text-align: center;
+  font-size: 1rem;
   transition: all 300ms ease-in-out;
 }
 

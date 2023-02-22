@@ -25,6 +25,16 @@
                 </a>
                 <nav id="navBar">
                     <img id="menu" src="style/img/hamburguer.svg" alt="">
+                    <div id="menuCont">
+                        <ul id="ulMenu">
+                            <li class="liMenu"> <a href="#works">Portfolio</a></li>
+                            <li class="liMenu"> <a href="#aboutMe">About</a></li>
+                            <div id="menuContact">
+                                <li class="liMenu1"> <a href="#formTitle">Contact</a></li>
+                                <li id="liMenuIcon"><a href="#formTitle"> <img src="/style/img/contact.svg" alt=""></a></li>
+                            </div>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -34,12 +44,15 @@
     <main class="flexColumn">
         <section id="main" class="flexColumn">
             <div id="mainCont">
-                <h1 class="creteRound">Hey There. I'm Alejandro</h1>
-                <h2 class="roboto">I'm a Software Developer</h2>
-                <p>I can help you build a product , feature or website Look through some of my work and experience! If
-                    you like what you see and have a project you need coded,
-                    don’t hestiate to contact me.</p>
-                <div>
+                <div id="mainPres">
+                    <h1 class="creteRound">Hey There. I'm Alejandro</h1>
+                    <h2 class="roboto">I'm a Software Developer</h2>
+                    <p>I can help you build a product , feature or website Look through some of my work and experience!
+                        If
+                        you like what you see and have a project you need coded,
+                        don’t hestiate to contact me.</p>
+                </div>
+                <div id="mainIconsCont">
                     <ul id="mainIcons">
                         <li> <a href="https://github.com/VelzckC0D3/" target="_blank" rel="noopener"
                                 aria-label="Github"><img class="icon" src="style/icon/github.svg" alt="GitHub"></a>
@@ -61,6 +74,7 @@
             <div id="worksCont" class="flexColumn">
                 <div id="worksTitle">
                     <h2 class="creteRound">my recent works</h2>
+                    <div id="worksLine"></div>
                 </div>
                 <div id="worksGrid">
                     <div id="pGridCont">
@@ -311,10 +325,13 @@
                 <div>
                     <form class="formFlex flexColumn" action="https://formspree.io/f/mzbqrapp" target="bl
                     " method="POST">
-                        <input type="text" class="formInput input" id="name" name="name" required="required"  maxlength="30" placeholder="Full name"><br>
-                        <input type="email" class="formInput input" id="email" name="email" required="required" placeholder="Email address"><br>
-                        <textarea type="text" class="inter inputM" id="message" name="comments" required="required"  maxlength="500" placeholder="Enter text here"></textarea>
-                        <input type="submit" class="inter submit"  value="Get in touch">
+                        <input type="text" class="formInput input" id="name" name="name" required="required"
+                            maxlength="30" placeholder="Full name"><br>
+                        <input type="email" class="formInput input" id="email" name="email" required="required"
+                            placeholder="Email address"><br>
+                        <textarea type="text" class="inter inputM" id="message" name="comments" required="required"
+                            maxlength="500" placeholder="Enter text here"></textarea>
+                        <input type="submit" class="inter submit" value="Get in touch">
                     </form>
                 </div>
             </div>

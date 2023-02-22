@@ -71,7 +71,7 @@ h2 {
 /* MAIN */
 
 #header {
-  background-color: gray;
+  background-color: #3c3a39;
   width: 100vw;
   height: 2.87rem;
 }
@@ -85,8 +85,17 @@ h2 {
   flex-wrap: 1rem;
 }
 
-#headerNav {
-  background-color: #3c3a39;
+#navBar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+#menuCont {
+  display: none;
+  position: absolute;
 }
 
 #logo {
@@ -195,6 +204,10 @@ h2 {
   font-weight: 400;
   font-size: 2.5rem;
   color: #1c1a19;
+}
+
+#worksLine {
+  display: none;
 }
 
 #worksGrid {
@@ -416,6 +429,7 @@ h2 {
   padding-top: 2.5rem;
   background-color: #1c1a19;
   border-top: 5px solid #ff6b00;
+  border-bottom: 5px solid #ff6b00;
 }
 
 #aboutMeCont {
@@ -653,3 +667,195 @@ h2 {
 }
 
 /* FOOTER */
+
+/* DESKTOP VERSION 768P */
+
+@media (min-width: 768px) {
+  /* HEADER & MAIN TITLE */
+
+  header {
+    height: 4.5rem;
+  }
+
+  #header {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #headerNav {
+    width: 80%;
+  }
+
+  #logo {
+    font-size: 1.2rem;
+  }
+
+  #navBar {
+    flex-direction: row;
+    width: 31%;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #menuCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  #ulMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  #ulMenu a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #menuContact {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #fdfdfd00;
+    transition: all 300ms ease-in-out;
+  }
+
+  .liMenu {
+    -webkit-text-stroke: 0.5px;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition: all 300ms ease-in-out;
+  }
+
+  #menuContact:hover {
+    background-color: rgba(0, 0, 0, 0.089);
+    border-bottom: 2px solid #ff6a00;
+  }
+
+  .liMenu1 {
+    -webkit-text-stroke: 0.5px;
+    height: 4.5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .liMenu:hover {
+    border-bottom: 2px solid #ff6a00;
+    background-color: rgba(0, 0, 0, 0.089);
+  }
+
+  .liMenu a, .liMenu1 a {
+    color: white;
+    text-decoration: none;
+  }
+
+  #liMenuIcon {
+    display: flex;
+    width: 3.7rem;
+    padding-left: 5;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(3px);
+  }
+
+  #liMenuIcon a {
+    width: 100%;
+  }
+
+  #main {
+    background-image: url(/style/img/desktop_BG.svg);
+    background-size: 39rem;
+    background-position: 100% -1rem;
+  }
+
+  #mainCont {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  #mainPres {
+    padding-left: 6%;
+    transform: scale(1.25);
+    color: white;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #mainPres h2 {
+    -webkit-text-stroke: 1px;
+  }
+
+  #mainIconsCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 6%;
+    height: 100%;
+  }
+
+  #mainIcons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mainIcons li {
+    padding: 1px 1px;
+    margin: -7px;
+  }
+
+  #worksCont {
+    padding: 5rem 9rem;
+  }
+
+  #worksTitle {
+    display: flex;
+    border: none;
+    align-items: center;
+  }
+
+  #worksTitle h2 {
+    min-width: fit-content;
+  }
+
+  #worksLine {
+    display: block;
+    background-color: #21212181;
+    width: 60vw;
+    height: 2px;
+    margin-left: 1.5rem;
+  }
+
+
+  /* HEADER & MAIN TITLE*/
+}
+
+/* DESKTOP VERSION 768P */

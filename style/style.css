@@ -522,3 +522,134 @@ h2 {
 /* SKILLS */
 
 /* ABOUT ME */
+
+/* FORM */
+
+#form {
+  padding: 6rem 0 8rem;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+#formCont {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formFlex {
+  align-items: center;
+  padding-top: 2rem;
+}
+
+#formTitle {
+  text-align: center;
+  font-size: 1.3rem;
+  -webkit-text-stroke: 1.5px;
+  line-height: 2.7rem;
+  color: #172b4d;
+}
+
+#message {
+  padding-bottom: 1rem;
+}
+
+.input {
+  font-size: 1rem;
+  outline: none;
+  padding: 1rem 1rem 1rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+  width: 85%;
+  height: 1rem;
+}
+
+#textCont {
+  width: 100%;
+  overflow: unset;
+}
+
+.inputM {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fbf8f7;
+  background-image: url(img/resize.svg);
+  background-repeat: no-repeat;
+  background-position: 99% 95%;
+  resize: vertical;
+  min-height: 5rem;
+  max-height: 15rem;
+  width: 85%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.inputM::-webkit-resizer {
+  background-color: transparent;
+}
+
+.inputM::placeholder {
+  color: black;
+}
+
+.submit {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  color: white;
+  background-color: #ff6a00;
+  border: none;
+  width: 8.5rem;
+  height: 3rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.submit:hover {
+  transform: scale(1.05);
+}
+
+/* FORM */
+
+/* FOOTER */
+
+#footerCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+}
+
+#iconCont {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerIcons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerIcons {
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0;
+}
+
+/* FOOTER */

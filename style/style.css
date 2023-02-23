@@ -338,7 +338,6 @@ h2 {
 
 .imgGrid1 {
   height: 100%;
-
   background: rgb(0, 0, 0);
   background:
     linear-gradient(
@@ -954,10 +953,6 @@ h2 {
     font-size: 1.3rem;
   }
 
-  #pTechCont {
-
-  }
-
   #pTechCont li {
     padding: 0.5rem 0.9rem;
     margin: 0;
@@ -1136,5 +1131,6 @@ h2 {
   }
 
   /* FORM */
+}
 
 /* DESKTOP VERSION 768P */

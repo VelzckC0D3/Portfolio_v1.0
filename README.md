@@ -17,6 +17,7 @@
   - [Run tests](#run-tests)
   - [Deployment](#deployment)
 - [👥 Author](#author)
+- [👥 Collaborator](#collaborator)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -142,10 +143,14 @@ Your software of preference
 
 ## 👥 Author <a name="author"></a>
 
-👤 **Author**
-
 - GitHub: [@VelzckC0D3](https://github.com/VelzckC0D3)
 - LinkedIn: [VelzckC0D3](https://www.linkedin.com/in/velzckcode/)
+
+<!-- COLLABORATOR -->
+
+## 👥 Collaborator <a name="collaborator"></a>
+
+- GitHub: [@zam-cham](https://github.com/zam-cham)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

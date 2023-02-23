@@ -215,7 +215,7 @@ h2 {
   height: 100%;
   width: 100%;
   justify-content: center;
-  row-gap: 0.5rem;
+  row-gap: 5rem;
   padding-top: 5rem;
 }
 
@@ -301,10 +301,6 @@ h2 {
   cursor: pointer;
 }
 
-#action:hover {
-  transform: scale(1.1);
-}
-
 #action:link {
   text-decoration: none;
   color: white !important;
@@ -322,6 +318,15 @@ h2 {
 .gridCont {
   height: 25.5rem;
   color: white;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#sGridCont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
 }
 
 .sGrid {
@@ -331,12 +336,30 @@ h2 {
   align-items: center;
 }
 
-.imgGrid {
+.imgGrid1 {
   height: 100%;
-  background-image: url(imgGrid/grid.svg);
+  background: rgb(0, 0, 0);
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8687850140056023) 5%,
+      rgba(0, 0, 0, 0.2637429971988795) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  transition: 300ms all ease-in-out;
+}
+
+#card0 {
+  background-image: url(imgGrid/card0.svg);
+}
+
+#card1 {
+  background-image: url(imgGrid/card1.svg);
+}
+
+#card2 {
+  background-image: url(imgGrid/card2.svg);
 }
 
 .gridPadding {
@@ -345,6 +368,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition: 300ms all ease-in-out;
 }
 
 .cardP {
@@ -375,6 +399,7 @@ h2 {
   padding: 0.6rem 0.5rem;
   transition: all 300ms ease-in-out;
   -webkit-text-stroke: 0.25px;
+  font-size: 1.9vh;
 }
 
 .cardLi:hover {
@@ -406,7 +431,12 @@ h2 {
 
 .gridButton:hover {
   background-color: #ff6a00;
-  transform: scale(1.02);
+  transform: scale(1.05) !important;
+}
+
+.gridLink {
+  width: 100%;
+  text-align: center;
 }
 
 .gridLink:link {
@@ -563,6 +593,26 @@ h2 {
   -webkit-text-stroke: 1.5px;
   line-height: 2.7rem;
   color: #172b4d;
+  display: flex;
+  justify-content: center;
+}
+
+#formTitle h2 {
+  max-width: 19rem;
+}
+
+#formName {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+#formName input {
+  margin: 0 5.8%;
 }
 
 #message {
@@ -606,7 +656,8 @@ h2 {
 }
 
 .inputM::placeholder {
-  color: black;
+  color: rgba(0, 0, 0, 0.418);
+  font-style: italic;
 }
 
 .submit {
@@ -637,18 +688,24 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 4rem;
 }
 
 #iconCont {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 4rem;
+  width: 100%;
+  max-height: 100%;
+  height: 4.5rem;
+}
+
+#fIcons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+#iconsLi {
+  padding: 1px 1px;
+  margin: -7px;
 }
 
 #footerIcons {
@@ -694,7 +751,6 @@ h2 {
 
   #navBar {
     flex-direction: row;
-    width: 31%;
   }
 
   #menu {
@@ -736,11 +792,12 @@ h2 {
 
   .liMenu {
     -webkit-text-stroke: 0.5px;
+    padding: 0 2rem;
     height: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
+    width: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     transition: all 300ms ease-in-out;
   }
@@ -748,6 +805,11 @@ h2 {
   #menuContact:hover {
     background-color: rgba(0, 0, 0, 0.089);
     border-bottom: 2px solid #ff6a00;
+  }
+
+  #menuContact a {
+    color: white;
+    text-decoration: none;
   }
 
   .liMenu1 {
@@ -764,18 +826,17 @@ h2 {
     background-color: rgba(0, 0, 0, 0.089);
   }
 
-  .liMenu a, .liMenu1 a {
+  .liMenuLink {
     color: white;
     text-decoration: none;
   }
 
   #liMenuIcon {
     display: flex;
-    width: 3.7rem;
+    width: 3rem;
     padding-left: 5;
     justify-content: center;
     align-items: center;
-    transform: translateY(3px);
   }
 
   #liMenuIcon a {
@@ -832,6 +893,8 @@ h2 {
     margin: -7px;
   }
 
+  /* WORKS */
+
   #worksCont {
     padding: 5rem 9rem;
   }
@@ -854,8 +917,223 @@ h2 {
     margin-left: 1.5rem;
   }
 
+  #pGridCont {
+    display: flex;
+    min-height: 27.5rem;
+  }
 
-  /* HEADER & MAIN TITLE*/
-}
+  #pImgGrid {
+    width: 75%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 5%;
+  }
+
+  #pGridInfo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 1.3rem;
+    justify-content: flex-start;
+  }
+
+  #pGridTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  #pGridTitle h2 {
+    margin: 0;
+  }
+
+  #pGridP {
+    font-size: 1.3rem;
+  }
+
+  #pTechCont {
+
+  }
+
+  #pTechCont li {
+    padding: 0.5rem 0.9rem;
+    margin: 0;
+  }
+
+  #act {
+    margin-top: 1rem;
+  }
+
+  #act a {
+    font-size: 1.1rem;
+  }
+
+  #sGridCont {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    padding-top: 1rem;
+    gap: 1.5rem;
+  }
+
+  #gridPading {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cardUl {
+    flex-wrap: wrap;
+  }
+
+  .imgGrid {
+    background-size: cover;
+  }
+
+  .gridCont {
+    overflow: hidden;
+    min-height: 27.5rem;
+    min-width: 13.5rem;
+    border-right: 3px solid #ff6a00;
+    border-radius: 0 5%;
+    background-color: black;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .gridButton {
+    transform: translateY(5rem);
+  }
+
+  .gridButton:hover {
+    box-shadow: 0 0 73px -3px rgba(0, 0, 0, 0.75);
+  }
+
+  .sGrid {
+    cursor: default;
+  }
+
+  .sGrid:hover > .gridButton {
+    transform: translateY(0);
+  }
+
+  .gridPadding {
+    transition: 300ms all ease-in-out;
+  }
+
+  .sGrid:hover > .gridPadding {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  .imgGrid1 /* gridshadows */ {
+    opacity: 1;
+    background: rgb(0, 0, 0);
+    background:
+      linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8687850140056023) 5%,
+        rgba(0, 0, 0, 0.2637429971988795) 80%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    transition: all 300ms ease-in-out;
+    background-size: 30rem 29rem;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: -1rem -1rem;
+  }
+
+  .imgGrid1:hover {
+    background-position: -1rem 35rem;
+  }
+
+  /* WORKS */
+
+  /* HEADER & MAIN TITLE */
+
+  /* ABOUT ME */
+
+  #aboutMeCont {
+    background-image: url(/style/img/desktop_about.svg);
+    background-position: right 45%;
+    justify-content: flex-start;
+  }
+
+  #about {
+    width: 80%;
+    height: 33rem;
+  }
+
+  #aboutMe {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #aboutText {
+    width: 49%;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #buttonCV {
+    margin-top: 1.75rem;
+  }
+
+  #aboutMeSkills {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #skillsCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  /* ABOUT ME */
+
+  /* FORM */
+
+  #formCont {
+    flex-direction: row;
+    width: 82%;
+  }
+
+  #formBlock {
+    width: 100%;
+  }
+
+  #formTitle h2 {
+    max-width: 35rem;
+    min-width: 22rem;
+    text-align: left;
+    font-size: 2.3rem;
+    line-height: 3rem;
+    -webkit-text-stroke: 2px;
+  }
+
+  #formName {
+    flex-direction: row;
+  }
+
+  #inputCont {
+    width: 90%;
+  }
+
+  /* FORM */
 
 /* DESKTOP VERSION 768P */

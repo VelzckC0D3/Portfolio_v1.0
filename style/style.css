@@ -831,7 +831,7 @@ h2 {
   }
 
   #main {
-    background-image: url(/style/img/desktop_BG.svg);
+    background-image: url(img/desktop_BG.svg);
     background-size: 39rem;
     background-position: 100% -1rem;
   }
@@ -1043,7 +1043,7 @@ h2 {
   /* ABOUT ME */
 
   #aboutMeCont {
-    background-image: url(./img/desktop_about.svg);
+    background-image: url(img/desktop_about.svg);
     background-position: right 45%;
     justify-content: flex-start;
   }

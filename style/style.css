@@ -564,7 +564,11 @@ h2 {
   transition: all 300ms ease-in-out;
 }
  
-
+.skillsLi:hover {
+  color: white;
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 /* SKILLS */
 

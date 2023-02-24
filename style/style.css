@@ -536,7 +536,7 @@ h2 {
 #aboutMeSkills {
   padding: 7rem 0;
   align-items: center;
-  color: white;
+  color: rgb(142, 141, 141);
 }
 
 .skillsCont {
@@ -560,6 +560,13 @@ h2 {
   text-align: center;
   padding: 1rem 0;
   font-size: 1.3rem;
+  transition: all 300ms ease-in-out;
+}
+
+.skillsLi:hover {
+  color: white;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* SKILLS */
@@ -727,8 +734,6 @@ h2 {
 /* DESKTOP VERSION 768P */
 
 @media (min-width: 768px) {
-  /* HEADER & MAIN TITLE */
-
   header {
     height: 4.5rem;
   }
@@ -883,7 +888,7 @@ h2 {
   /* WORKS */
 
   #worksCont {
-    padding: 5rem 9rem;
+    padding: 5rem 4rem;
   }
 
   #worksTitle {
@@ -956,7 +961,7 @@ h2 {
   #sGridCont {
     display: grid;
     flex-direction: row;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     padding-top: 1rem;
     gap: 1.5rem;
@@ -1022,7 +1027,7 @@ h2 {
         rgba(0, 0, 0, 0) 100%
       );
     transition: all 300ms ease-in-out;
-    background-size: 30rem 29rem;
+    background-size: 55rem 29rem;
     background-attachment: local;
     background-repeat: no-repeat;
     background-position: -1rem -1rem;
@@ -1119,6 +1124,19 @@ h2 {
 
   #inputCont {
     width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* HEADER & MAIN TITLE */
+
+  #sGridCont {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    padding-top: 1rem;
+    gap: 1.5rem;
   }
 
   /* FORM */

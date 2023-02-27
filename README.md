@@ -72,10 +72,15 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Click here to visit the Live Demo](https://velzckcode.netlify.app)
+[Click here to visit the Live Demo on Netlify](https://velzckcode.netlify.app)
+\
+[Click here to visit the Live Demo on Github](https://velzckc0d3.github.io/Portfolio-v2.0-Microverse/)
 \
 \
- ![Portfolio-Demo](https://user-images.githubusercontent.com/92229666/219415239-b2b42453-78c8-475a-a57f-23e3ffb283e6.gif)
+![portfolio](https://user-images.githubusercontent.com/92229666/221633626-0f15e7df-dc07-4ae7-9252-32a8feed9f4d.gif)
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

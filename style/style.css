@@ -74,6 +74,10 @@ h2 {
   background-color: #3c3a39;
   width: 100vw;
   height: 2.87rem;
+  position: fixed;
+  left: 0;
+  z-index: 2;
+  border-bottom: 4px solid #ff6b00;
 }
 
 .headerCont {
@@ -399,7 +403,7 @@ h2 {
   padding: 0.6rem 0.5rem;
   transition: all 300ms ease-in-out;
   -webkit-text-stroke: 0.25px;
-  font-size: 1.9vh;
+  font-size: 1.4rem;
 }
 
 .cardLi:hover {
@@ -566,7 +570,7 @@ h2 {
 .skillsLi:hover {
   color: white;
   transform: scale(1.1);
-  cursor: pointer;
+  cursor: default;
 }
 
 /* SKILLS */
@@ -576,7 +580,7 @@ h2 {
 /* FORM */
 
 #form {
-  padding: 6rem 0 8rem;
+  padding: 11rem 0 8rem;
   justify-content: flex-start;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.158);
@@ -739,10 +743,15 @@ h2 {
   }
 
   #header {
-    height: 100%;
+    height: 4.5rem;
+    align-self: center;
+    justify-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    left: 0;
+    position: fixed;
+    z-index: 3;
   }
 
   #headerNav {
@@ -814,7 +823,6 @@ h2 {
   }
 
   .liMenu:hover {
-    border-bottom: 2px solid #ff6a00;
     background-color: rgba(0, 0, 0, 0.089);
   }
 
@@ -1051,6 +1059,7 @@ h2 {
     background-image: url(img/desktop_about.svg);
     background-position: right 45%;
     justify-content: flex-start;
+    width: 100%;
   }
 
   #about {

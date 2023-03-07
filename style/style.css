@@ -98,8 +98,110 @@ h2 {
 }
 
 #menuCont {
-  display: none;
   position: absolute;
+  left: 0;
+  top: 2.5rem !important;
+  width: 100%;
+  height: 100vh;
+
+  /*   transition-delay: 300ms right; */
+  transition: 150ms all ease-in-out;
+  transform-origin: top;
+  opacity: 0;
+  transform: scaleY(0);
+  user-select: none;
+}
+
+#menu {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 16px;
+  transition: all 500ms ease-in-out;
+  user-select: none;
+}
+
+#menuX {
+  opacity: 0;
+  transition: all 500ms;
+  transform: translateX(-17px) rotate(0);
+  user-select: none;
+}
+
+.xCenter {
+  filter: brightness(1.75);
+  opacity: 1 !important;
+  z-index: 2 !important;
+  transform: translateX(-17px) rotate(360deg) !important;
+}
+
+#ulMenu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 3rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  transition: all 100ms ease-in-out;
+}
+
+.liMenu {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.31);
+  width: 80%;
+}
+
+.liMenuLink {
+  color: #fff5e1;
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  /*   display: none; */
+}
+
+.ulCenter {
+  opacity: 1 !important;
+  padding-top: 3rem !important;
+
+  /*   background: rgb(0, 0, 0);
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(31, 30, 29, 0.6699054621848739) 24%,
+      rgba(60, 58, 57, 0.9444152661064426) 39%,
+      rgba(60, 58, 57, 1) 65%
+    ); */
+  background-color: #3c3a39;
+}
+
+.responsiveMenu {
+  top: 3rem !important;
+  transform: scale(1) !important;
+  right: 0 !important;
+  opacity: 1 !important;
+}
+
+.displayNone {
+  opacity: 0;
+  z-index: -1 !important;
+  transform: rotate(360deg);
+  transition: all 500ms ease-in-out;
+}
+
+.displayN {
+  display: none;
+}
+
+.displayLogo {
+  opacity: 0;
+}
+
+.display {
+  display: block !important;
+  opacity: 1 !important;
+  transition: all 500ms ease-out;
 }
 
 #logo {
@@ -323,8 +425,13 @@ h2 {
   height: 25.5rem;
   color: white;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  background-size: 130%;
+  background-position: 50% 50%;
+  transition: all 500ms ease-in-out;
+}
+
+.gridCont:hover {
+  background-size: 115%;
 }
 
 #sGridCont {
@@ -399,16 +506,17 @@ h2 {
 }
 
 .cardLi {
-  background-color: rgba(255, 255, 255, 0.24);
   padding: 0.6rem 0.5rem;
   transition: all 300ms ease-in-out;
   -webkit-text-stroke: 0.25px;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .cardLi:hover {
   transform: scale(1.15);
-  background-color: rgba(255, 255, 255, 0.432);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .cardLink:link {
@@ -715,7 +823,6 @@ h2 {
 
 #iconsLi {
   padding: 1px 1px;
-  margin: -7px;
 }
 
 #footerIcons {
@@ -768,6 +875,13 @@ h2 {
 
   #menu {
     display: none;
+    transition: all 500ms ease-in-out;
+  }
+
+  #menuX {
+    opacity: 0;
+    transition: all 0.001ms;
+    transform: translateX(-17px) rotate(0);
   }
 
   #menuCont {
@@ -777,6 +891,11 @@ h2 {
     position: relative;
     height: 100%;
     width: 100%;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+    transform: translateY(0);
   }
 
   #ulMenu {
@@ -785,6 +904,11 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
     margin: 0;
+    opacity: 1 !important;
+  }
+
+  .black {
+    background-color: #000 !important;
   }
 
   #ulMenu a {
@@ -812,6 +936,10 @@ h2 {
     transition: all 300ms ease-in-out;
   }
 
+  .cardLi {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   #menuContact:hover {
     background-color: rgba(0, 0, 0, 0.089);
     border-bottom: 2px solid #ff6a00;
@@ -829,6 +957,7 @@ h2 {
   .liMenuLink {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
   }
 
   #liMenuIcon {
@@ -956,6 +1085,7 @@ h2 {
   #pTechCont li {
     padding: 0.5rem 0.9rem;
     margin: 0;
+    border-radius: 6px;
   }
 
   #act {
@@ -996,7 +1126,15 @@ h2 {
     border-radius: 0 5%;
     background-color: black;
     height: 100%;
-    background-size: cover;
+    background-size: 160%;
+    transition: all 500ms ease-in-out;
+    box-shadow: inset 47px 52px 109px -26px rgba(0, 0, 0, 0);
+  }
+
+  .gridCont:hover {
+    background-size: 135%;
+    background-position: 40% 45%;
+    box-shadow: inset 47px 52px 109px -26px rgba(0, 0, 0, 0.75);
   }
 
   .gridButton {

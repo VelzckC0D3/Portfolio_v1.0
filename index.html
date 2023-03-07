@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Velzck Portfolio V2.0">
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,13 +25,16 @@
                     <p>VelzckC0D3</p>
                 </a>
                 <nav id="navBar">
-                    <img id="menu" src="style/img/hamburguer.svg" alt="">
+                    <div id="mobileMenu">
+                        <img id="menu" src="style/img/hamburguer.svg" alt="">
+                        <img id="menuX" src="style/img/hamburguerX.svg" alt="">
+                    </div>
                     <div id="menuCont">
                         <ul id="ulMenu">
-                            <li class="liMenu"> <a class="liMenuLink" href="#works">Portfolio</a></li>
-                            <li class="liMenu"> <a class="liMenuLink" href="#aboutMe">About</a></li>
-                            <li class="liMenu"> <a class="liMenuLink" href="#form">Contact</a></li>
-                            <li class="liMenu"><a class="liMenuLink" a href="mailto:alejandro.velzck@gmail.com?subject=Hi, I want to get in contact with you."> <img src="style/img/contact.svg" alt=""></a>
+                            <li class="liMenu" id="liMenu"> <a class="liMenuLink" href="#works">Portfolio</a></li>
+                            <li class="liMenu" id="liMenu"> <a class="liMenuLink" href="#aboutMe">About</a></li>
+                            <li class="liMenu" id="liMenu"> <a class="liMenuLink" href="#form">Contact</a></li>
+                            <li class="liMenu" id="liMenu"><a class="liMenuLink" a href="mailto:alejandro.velzck@gmail.com?subject=Hi, I want to get in contact with you."> <img src="style/img/contact.svg" alt=""></a>
                             </li>
                         </ul>
                     </div>
@@ -382,6 +384,7 @@
             </div>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -99,11 +99,17 @@ h2 {
 
 #menuCont {
   position: absolute;
-  top: -60rem;
+  left: 0;
+  top: 3rem !important;
   width: 100%;
   height: 100vh;
-  right: 0;
-  transition: 500ms all ease-in-out;
+
+  /*   transition-delay: 300ms right; */
+  transition: 150ms all ease-in-out;
+  transform-origin: top;
+  opacity: 0;
+  transform: scaleY(0);
+  user-select: none;
 }
 
 #menu {
@@ -112,19 +118,21 @@ h2 {
   right: 0;
   top: 16px;
   transition: all 500ms ease-in-out;
+  user-select: none;
 }
 
 #menuX {
   opacity: 0;
-  transform: translateX(-17.5px) rotate(0deg);
-  transition: 500ms transform ease-in-out, 350ms opacity ease-in-out;
+  transition: all 500ms;
+  transform: translateX(-17.5px) rotate(0);
+  user-select: none;
 }
 
 .xCenter {
   filter: brightness(1.75);
   opacity: 1 !important;
   z-index: 2 !important;
-  transform: translateX(-17.5px) rotate(360deg) !important;
+  transform: translateX(-17px) rotate(360deg) !important;
 }
 
 #ulMenu {
@@ -134,20 +142,38 @@ h2 {
   justify-content: flex-start;
   row-gap: 3rem;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  transition: all 100ms ease-in-out;
 }
 
 .liMenuLink {
   color: white;
   text-decoration: none;
+
+  /*   display: none; */
 }
 
 .ulCenter {
-  transform: translateX(-1.37rem);
+  opacity: 1 !important;
+  padding-top: 3rem !important;
+  background: rgb(0, 0, 0);
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(31, 30, 29, 0.6699054621848739) 24%,
+      rgba(60, 58, 57, 0.9444152661064426) 39%,
+      rgba(60, 58, 57, 1) 65%
+    );
 }
 
 .responsiveMenu {
-  background-color: #3c3a39;
+  /*   background-color: #3c3a39; */
   top: 3rem !important;
+  transform: scale(1) !important;
+  right: 0 !important;
+  opacity: 1 !important;
 }
 
 .displayNone {
@@ -384,8 +410,13 @@ h2 {
   height: 25.5rem;
   color: white;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  background-size: 130%;
+  background-position: 50% 50%;
+  transition: all 500ms ease-in-out;
+}
+
+.gridCont:hover {
+  background-size: 115%;
 }
 
 #sGridCont {
@@ -460,16 +491,17 @@ h2 {
 }
 
 .cardLi {
-  background-color: rgba(255, 255, 255, 0.24);
   padding: 0.6rem 0.5rem;
   transition: all 300ms ease-in-out;
   -webkit-text-stroke: 0.25px;
   font-size: 1rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .cardLi:hover {
   transform: scale(1.15);
-  background-color: rgba(255, 255, 255, 0.432);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .cardLink:link {
@@ -776,7 +808,6 @@ h2 {
 
 #iconsLi {
   padding: 1px 1px;
-  margin: -7px;
 }
 
 #footerIcons {
@@ -832,6 +863,12 @@ h2 {
     transition: all 500ms ease-in-out;
   }
 
+  #menuX {
+    opacity: 0;
+    transition: all 0.001ms;
+    transform: translateX(-17.5px) rotate(0);
+  }
+
   #menuCont {
     display: flex;
     justify-content: center;
@@ -842,6 +879,8 @@ h2 {
     top: 0 !important;
     left: 0 !important;
     background-color: transparent !important;
+    opacity: 1 !important;
+    transform: translateY(0);
   }
 
   #ulMenu {
@@ -850,6 +889,7 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
     margin: 0;
+    opacity: 1 !important;
   }
 
   .black {
@@ -879,6 +919,10 @@ h2 {
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     transition: all 300ms ease-in-out;
+  }
+
+  .cardLi {
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   #menuContact:hover {
@@ -1025,6 +1069,7 @@ h2 {
   #pTechCont li {
     padding: 0.5rem 0.9rem;
     margin: 0;
+    border-radius: 6px;
   }
 
   #act {
@@ -1065,7 +1110,15 @@ h2 {
     border-radius: 0 5%;
     background-color: black;
     height: 100%;
-    background-size: cover;
+    background-size: 160%;
+    transition: all 500ms ease-in-out;
+    box-shadow: inset 47px 52px 109px -26px rgba(0, 0, 0, 0);
+  }
+
+  .gridCont:hover {
+    background-size: 135%;
+    background-position: 40% 45%;
+    box-shadow: inset 47px 52px 109px -26px rgba(0, 0, 0, 0.75);
   }
 
   .gridButton {

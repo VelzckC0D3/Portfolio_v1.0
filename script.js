@@ -52,21 +52,6 @@ window.addEventListener("resize", () => {
 
 /* RESPONSIVE MENU */
 
-/* POP UP */
-
-const popUpCont = document.querySelector("#popupCont"); // Pop up container
-const button1 = document.querySelector("#action"); // First button on the section Works
-const button1X = document.querySelector("#popTopButton"); // Close pop up button
-
-button1.addEventListener("click", () => {
-  popUpCont.classList.add("popOn");
-});
-
-button1X.addEventListener("click", () => {
-  popUpCont.classList.remove("popOn");
-});
-/* POP UP */
-
 /* POP UP INFORMATION */
 
 /* OBJECTS */
@@ -77,70 +62,120 @@ const cardObjects = [
     tech1: "HTML",
     tech2: "BootsTrap",
     tech3: "Ruby",
+    tech: ["HTML", "BootsTrap", "Ruby"],
+    contBG: "style/imgGrid/pGrid1.svg",
+    description:
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card6",
+  },
+  {
+    title: "Multi-Post Stories",
+    tech1: "HTML",
+    tech2: "BootsTrap",
+    tech3: "Ruby",
+    tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card0.svg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquam, laudantium quas adipisci vitae nemo exercitationem sapiente odio natus perspiciatis!",
-    seeLive: "",
-    seeSources: "",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card0",
   },
   {
     title: "Profesional Art Printing Data More",
     tech1: "HTML",
     tech2: "BootsTrap",
     tech3: "Ruby",
+    tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card1.svg",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt pariatur maxime expedita delectus laborum voluptates aut dolore suscipit eius illum.",
-    seeLive: "",
-    seeSources: "",
+      "Lorem ipsum dolor sit amet pariatur maxime expedita delectus laborum voluptates aut dolore suscipit eius illum.",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card1",
   },
   {
     title: "Data Dashboard Healthcare",
     tech1: "HTML",
     tech2: "BootsTrap",
     tech3: "Ruby",
+    tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card2.svg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor iusto officiis sunt alias? Vero voluptatum facilis explicabo veritatis adipisci!",
-    seeLive: "",
-    seeSources: "",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card2",
   },
   {
     title: "Website Portfolio",
     tech1: "HTML",
     tech2: "BootsTrap",
     tech3: "Ruby",
-    contBG: "style/imgGrid/card0.svg",
+    tech: ["HTML", "BootsTrap", "Ruby"],
+    contBG: "style/imgGrid/card1.svg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, exercitationem quo aliquam assumenda quam unde sint illum illo quia. Ut?",
-    seeLive: "",
-    seeSources: "",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card3",
   },
   {
     title: "Technology Innovation System",
     tech1: "HTML",
     tech2: "BootsTrap",
     tech3: "Ruby",
-    contBG: "style/imgGrid/card1.svg",
+    tech: ["HTML", "BootsTrap", "Ruby"],
+    contBG: "style/imgGrid/card2.svg",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem laboriosam laudantium vero quis maxime officiis delectus tempore fuga atque.",
-    seeLive: "",
-    seeSources: "",
+      "Lorem ipsum dolor sit amet consectetur adipis maxime officiis delectus tempore fuga atque.",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card4",
   },
+  {
+    title: "Aeronautic Simulator Visualizer",
+    tech1: "HTML",
+    tech2: "BootsTrap",
+    tech3: "Ruby",
+    tech: ["HTML", "BootsTrap", "Ruby"],
+    contBG: "style/imgGrid/card0.svg",
+    description:
+      "Voluptatem rem laboriosam laudantium vero quis maem ipsum dpisicing elit  officiis delectus tempore fuga atque.",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card5",
+  }, 
+  {
+    title: "TEST TEST TEST TEST",
+    tech1: "TEST",
+    tech2: "TEST",
+    tech3: "TEST",
+    tech: ["HTASDTML", "BootASDASDsTrap", "Ruby"],
+    contBG: "style/imgGrid/card3.svg",
+    description:
+      "ASDASDASD.",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card5",
+  }, 
 ];
 
 /* OBJECTS */
 
-const cardContainer = document.querySelector(".sGridCont");
+/* DYNAMIC CARDS */
+
+const cardContainer = document.querySelector(".sGridCont"); // this, is the html path where it's going to be added.
 
 const postMethods = () => {
   cardObjects.map((postData) => {
     const postElement = document.createElement("div");
-    postElement.classList.add("card");
+    postElement.classList.add("card", postData.class);
     postElement.innerHTML = `
     <div class="cardShadow">
-    <style>
-    .card:nth-child(${
+    <style>.card:nth-child(${
       cardObjects.indexOf(postData) + 1
     }) {background-image: url(${postData.contBG}) !important;}</style>
     <h2 class="cardTitle">${postData.title}</h2>
@@ -163,6 +198,103 @@ const postMethods = () => {
   });
 };
 postMethods();
-/* what we need: DataTransferItemList, LINK 1, 2, 3, BG AND PARAGRAPH */
+
+/* DYNAMIC CARDS */
+
+/* POP UP HTML */
+
+concard = [
+  {
+    title: "Multi-Post Stories",
+    tech1: "HTML",
+    tech2: "BootsTrap",
+    tech3: "Ruby",
+    tech: ["HTML", "BootsTrap", "Ruby"],
+    contBG: "style/imgGrid/card0.svg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquam, laudantium quas adipisci vitae nemo exercitationem sapiente odio natus perspiciatis!",
+    seeLive: "https://velzckcode.netlify.app/",
+    seeSources: "https://github.com/VelzckC0D3",
+    class: "card6",
+  },
+];
+
+const popCont = document.querySelector(".popCont");
+
+const postMethods1 = () => {
+  cardObjects.map((postData, index) => {
+    const postElement = document.createElement("div");
+    postElement.classList.add("pop", "slider");
+    postElement.setAttribute("id", postData.class);
+    postElement.innerHTML = `
+    
+    <div id="popTopCont">
+    <style>.pop:nth-child(${index + 1}) .popImg {background-image: url(${
+      postData.contBG
+    }) !important;}</style>
+          <div id="popTop">
+            <h2 id="popTitle">${postData.title}</h2>
+            <button type="button" id="popTopButton"></button>
+          </div>
+          <ul id="ulPop">
+            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">${
+              postData.tech1
+            }</a></li>
+            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">${
+              postData.tech2
+            }</a></li>
+            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">${
+              postData.tech3
+            }</a></li>
+          </ul>
+        </div>
+        <div id="popMain">
+        <div class="popImg">
+        <div class="popToggle">
+        </div>
+        </div>
+          <p id="popText">${postData.description}</p>
+          <div id="popIconsCont">
+            <a href="${
+              postData.seeLive
+            }" target="_blank" rel="noopener noreferrer" class="popIcon">See Live</a>
+            <a href="${
+              postData.seeSources
+            }" target="_blank" rel="noopener noreferrer" class="popIcon">See Source</a>
+          </div>
+        </div>
+    `;
+    popCont.appendChild(postElement);
+  });
+};
+
+postMethods1();
+
+/* POP UP HTML */
+
+/* POP UP INTERACTION */
+
+const popUp = document.querySelector(".wrapperCont")
+const pButton = document.querySelector(".popButton1");
+const sButton = document.querySelectorAll(".cardBtn");
+const xButton = document.querySelector("#popTopButton");
+
+
+pButton.addEventListener('click', () => {
+  popUp.classList.add('popOn');
+});
+
+xButton.addEventListener('click', ()=> {
+  popUp.classList.remove('popOn');
+});
+
+
+
+/* POP UP INTERACTION */
 
 /* POP UP INFORMATION */
+
+for (let i = 0; i < cardObjects.length; i++) {
+  const element = cardObjects[i];
+  console.log(cardObjects[i].tech[i])
+}

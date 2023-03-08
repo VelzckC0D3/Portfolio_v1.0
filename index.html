@@ -75,33 +75,20 @@
       </div>
     </section>
 
-    <section id="popupCont">
-      <div id="popup">
-        <div id="popTopCont">
-          <div id="popTop">
-            <h2 id="popTitle">JS Title</h2>
-            <button type="button" id="popTopButton"></button>
-          </div>
-          <ul id="ulPop">
-            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">Link</a></li>
-            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">Link</a></li>
-            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">Link</a></li>
-          </ul>
+    
+
+
+    <!-- POP UP -->
+    
+    <section class="wrapperCont">
+      <div class="popWrapper">
+        <div class="popCont">
+  
         </div>
-        <div id="popMain">
-          <div id="popImg"></div>
-          <p id="popText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-            took a galley of type and scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting, remaining essent</p>
-          <div id="popIconsCont">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="popIcon">See Live</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="popIcon">See Source</a>
-          </div>
-        </div>
-      </div>
+      </div>      
     </section>
 
+    <!-- WORKS -->
     <section id="works">
       <div id="worksCont" class="flexColumn">
         <div id="worksTitle">
@@ -121,39 +108,34 @@
                   been the industry's standard dummy text ever since the 1500s, when an unknown
                   printer
                   took a standard dummy text.</p>
-              </div>
-              <div id="pTechCont" class="inter">
-                <ul>
-                  <li> <a class="pTechLink" href="https://developer.mozilla.org/en/docs/Web/CSS" target="_blank"
+                </div>
+                <div id="pTechCont" class="inter">
+                  <ul>
+                    <li> <a class="pTechLink" href="https://developer.mozilla.org/en/docs/Web/CSS" target="_blank"
                       rel="noopener noreferrer">css</a> </li>
-                  <li> <a class="pTechLink" href="https://developer.mozilla.org/en/docs/Web/HTML" target="_blank"
-                      rel="noopener noreferrer">html</a> </li>
-                  <li> <a class="pTechLink" href="https://getbootstrap.com/" target="_blank"
-                      rel="noopener noreferrer">bootstrap</a> </li>
+                      <li> <a class="pTechLink" href="https://developer.mozilla.org/en/docs/Web/HTML" target="_blank"
+                        rel="noopener noreferrer">html</a> </li>
+                        <li> <a class="pTechLink" href="https://getbootstrap.com/" target="_blank"
+                          rel="noopener noreferrer">bootstrap</a> </li>
                   <li> <a class="pTechLink" href="https://www.ruby-lang.org/es/" target="_blank"
                       rel="noopener noreferrer">Ruby</a> </li>
-                  <li id="act"><a id="action" class="inter" rel="noopener noreferrer">See project</a>
-                  </li>
-                </ul>
+                      <li id="act"><a id="action" class="inter popButton1" rel="noopener noreferrer">See project</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
+              
+              <div class="sGridCont">
+              </div>
+              
             </div>
           </div>
-
-          <!-- SECONDARY CARDS -->
-
-          <div class="sGridCont">
-          </div>
-
-          <!-- SECONDARY CARDS -->
-
-
-
-
         </div>
       </div>
-      </div>
-      </div>
     </section>
+
+    <!-- ABOUT ME -->
     <section id="aboutMe">
       <div id="aboutMeCont">
         <div id="about">
@@ -164,18 +146,18 @@
             <p>Hello I’m a software developer! I can help you build a product , feature or website Look
               through some of my work and experience! If you like what you see and have a project you need
               coded, don’t hestiate to contact me.</p>
-          </div>
-          <div id="buttonCV">
-            <a id="cvLink" class="flexColumn inter" href="http://github.com/velzckC0D3" target="_blank"
+            </div>
+            <div id="buttonCV">
+              <a id="cvLink" class="flexColumn inter" href="http://github.com/velzckC0D3" target="_blank"
               rel="noopener noreferrer">
               get my resume
             </a>
           </div>
         </div>
       </div>
-
-
-
+      
+      
+      
       <div id="skillsCont">
         <div id="aboutMeSkills" class="flexColumn">
           <div class="skillsCont flexColumn">
@@ -216,44 +198,48 @@
         </div>
       </div>
     </section>
+
+    <!-- FORM -->
     <section id="form" class="flexColumn">
       <div id="formCont">
         <div id="formTitle" class="inter">
           <h2>I'm always interested in hearing about new projects, so if you'd like to chat
-
+            
             please get in touch.
           </h2>
         </div>
         <div id="formBlock">
           <form class="formFlex flexColumn" action="https://formspree.io/f/mzbqrapp" target="bl
-                    " method="POST">
-            <div id="formName">
-              <input type="text" class="formInput input" id="name" name="fName" required="required" maxlength="30"
-                placeholder="First name"></input>
-              <input type="text" class="formInput input" id="lName" name="lName" required="required" maxlength="30"
-                placeholder="Last name"></input>
-            </div>
-            <input type="email" class="formInput input" id="email" name="email" required="required"
-              placeholder="Email address"></input>
-            <textarea type="text" class="inter inputM" id="message" name="comments" required="required" maxlength="500"
-              placeholder="Hello Alejandro. I would like to get in touch with you..."></textarea>
-            <div id="inputCont">
-              <input type="submit" class="inter submit" value="Get in touch"></input>
-            </div>
-          </form>
-        </div>
+          " method="POST">
+          <div id="formName">
+            <input type="text" class="formInput input" id="name" name="fName" required="required" maxlength="30"
+            placeholder="First name"></input>
+            <input type="text" class="formInput input" id="lName" name="lName" required="required" maxlength="30"
+            placeholder="Last name"></input>
+          </div>
+          <input type="email" class="formInput input" id="email" name="email" required="required"
+          placeholder="Email address"></input>
+          <textarea type="text" class="inter inputM" id="message" name="comments" required="required" maxlength="500"
+          placeholder="Hello Alejandro. I would like to get in touch with you..."></textarea>
+          <div id="inputCont">
+            <input type="submit" class="inter submit" value="Get in touch"></input>
+          </div>
+        </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer id="footerCont">
-    <section id="iconCont">
-      <div id="footerIcons">
-        <ul id="fIcons" class="footerIcons">
-          <li> <a href="https://github.com/VelzckC0D3/" target="_blank" rel="noopener" aria-label="Github"><img
-                class="icon" src="style/icon/footer_github.svg" alt="GitHub"></a>
-          </li>
-          <li> <a href="https://www.linkedin.com/in/velzckcode/" target="_blank" rel="noopener" aria-label="Linkedin">
+
+</main>
+
+<footer id="footerCont">
+  <section id="iconCont">
+    <div id="footerIcons">
+      <ul id="fIcons" class="footerIcons">
+        <li> <a href="https://github.com/VelzckC0D3/" target="_blank" rel="noopener" aria-label="Github"><img
+          class="icon" src="style/icon/footer_github.svg" alt="GitHub"></a>
+        </li>
+        <li> <a href="https://www.linkedin.com/in/velzckcode/" target="_blank" rel="noopener" aria-label="Linkedin">
               <img class="icon" src="style/icon/footer_linkedin.svg" alt="Linkedin"></a></li>
           <li> <a href="https://www.angellist.com/" target="_blank" rel="noopener" aria-label="AngelList">
               <img class="icon" src="style/icon/footer_angellist.svg" alt="AngelList"></a></li>

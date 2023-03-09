@@ -126,7 +126,7 @@ const cardObjects = [
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
     class: "card6",
-  }
+  },
 ];
 
 /* OBJECTS */
@@ -135,12 +135,11 @@ const cardObjects = [
 
 const cardContainer = document.querySelector(".sGridCont"); // this, is the html path where it's going to be added.
 
-const postMethods = () => {
-  cardObjects.forEach((postData) => {
-    const postElement = document.createElement("div");
-    postElement.classList.add("card", postData.class);
-    postElement.style.backgroundImage = `url(${postData.contBG})`;
-    postElement.innerHTML = `
+cardObjects.forEach((postData) => {
+  const postElement = document.createElement("div");
+  postElement.classList.add("card", postData.class);
+  postElement.style.backgroundImage = `url(${postData.contBG})`;
+  postElement.innerHTML = `
       <div class="cardShadow">
       <h2 class="cardTitle">${postData.title}</h2>
       <p class="cardDesc">${postData.description}</p>
@@ -152,25 +151,21 @@ const postMethods = () => {
       <button class="cardBtn">see project</button>
       </div>
     `;
-    cardContainer.appendChild(postElement);
-  });
-};
-
-postMethods();
+  cardContainer.appendChild(postElement);
+});
 
 const popCont = document.querySelector(".popCont");
 
-const postMethods1 = () => {
-  cardObjects.map((postData, index) => {
-    const postElement = document.createElement("div");
-    postElement.classList.add("pop", "slider");
-    postElement.setAttribute("id", postData.class);
-    postElement.innerHTML = `
+cardObjects.map((postData, index) => {
+  const postElement = document.createElement("div");
+  postElement.classList.add("pop", "slider");
+  postElement.setAttribute("id", postData.class);
+  postElement.innerHTML = `
     
     <div id="popTopCont">
     <style>.pop:nth-child(${index + 1}) .popImg {background-image: url(${
-      postData.contBG
-    }) !important;}</style>
+    postData.contBG
+  }) !important;}</style>
           <div id="popTop">
             <h2 id="popTitle">${postData.title}</h2>
             <button type="button" id="popTopButton"></button>
@@ -203,11 +198,8 @@ const postMethods1 = () => {
           </div>
         </div>
     `;
-    popCont.appendChild(postElement);
-  });
-};
-
-postMethods1();
+  popCont.appendChild(postElement);
+});
 
 /* POP UP HTML */
 
@@ -218,23 +210,18 @@ const pButton = document.querySelector(".popButton1");
 const sButton = document.querySelectorAll(".cardBtn");
 const xButton = document.querySelectorAll("#popTopButton");
 
-const baseClass = 'card';
-for (let i = 0; i < cardObjects.length; i++) {
-  const uniqueClass = baseClass + i;
-  console.log(uniqueClass);
-}
 
 sButton.forEach((index) => {
     index.addEventListener("click", function () {
       popUp.classList.add("popOn")
-      const section = document.querySelector('#card3');
+      const section = document.querySelector('');
       section.scrollIntoView({ behavior: "smooth" });
     })
 })
 
 xButton.forEach((index) => {
   index.addEventListener("click", function () {
-    popUp.classList.remove("popOn")
+    popUp.classList.remove("popOn");
   });
 });
 

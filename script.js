@@ -54,7 +54,7 @@ window.addEventListener("resize", () => {
 
 /* POP UP INFORMATION */
 
-/* OBJECTS */
+// Project Info Array 
 
 const cardObjects = [
   {

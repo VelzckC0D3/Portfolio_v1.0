@@ -42,8 +42,18 @@ h2 {
 }
 
 .roboto {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 .inter {
@@ -97,8 +107,6 @@ h2 {
   top: 3rem !important;
   width: 100%;
   height: 100vh;
-
-  /*   transition-delay: 300ms right; */
   transition: 150ms all ease-in-out;
   transform-origin: top;
   opacity: 0;
@@ -141,32 +149,26 @@ h2 {
   transition: all 100ms ease-in-out;
 }
 
-.liMenu {
-  border-bottom: ;
-}
-
 .liMenuLink {
   color: white;
   text-decoration: none;
-
-  /*   display: none; */
 }
 
 .ulCenter {
   opacity: 1 !important;
   padding-top: 3rem !important;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0) 5%,
-    rgba(31, 30, 29, 0.6699054621848739) 24%,
-    rgba(60, 58, 57, 0.9444152661064426) 39%,
-    rgba(60, 58, 57, 1) 65%
-  );
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(31, 30, 29, 0.6699054621848739) 24%,
+      rgba(60, 58, 57, 0.9444152661064426) 39%,
+      rgba(60, 58, 57, 1) 65%
+    );
 }
 
 .responsiveMenu {
-  /*   background-color: #3c3a39; */
   top: 3rem !important;
   transform: scale(1) !important;
   right: 0 !important;
@@ -279,6 +281,16 @@ h2 {
   transition: 100ms transform ease-in-out, 600ms opacity ease-in-out !important;
 }
 
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .wrapperCont {
   width: 100vw;
   height: 100vh;
@@ -291,6 +303,7 @@ h2 {
   left: 0;
   background-color: rgba(0, 0, 0, 0.712);
   transform-origin: top;
+  animation: intro 500ms ease-in-out forwards;
 }
 
 .popWrapper {
@@ -302,7 +315,7 @@ h2 {
 
 .popCont {
   transform: scale(1) !important;
-  display: flex;  /* POPON */
+  display: flex; /* POPON */
   align-items: center;
   transition: all 200ms ease-in-out;
   transform-origin: top right;
@@ -311,7 +324,7 @@ h2 {
 }
 
 .pop {
-  height: 90vh; 
+  height: 90vh;
   width: 80vw;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -365,16 +378,18 @@ h2 {
 #popTop {
   margin: 0;
   width: 100%;
-  max-height: 1rem;
+  max-height: 0;
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  padding: 1.5rem 0 3rem;
+  align-items: center;
+  padding: 2rem 0 3rem;
 }
 
-#popTopTitle {
+.popTitle {
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  -webkit-text-stroke: 1.2px;
 }
 
 #popTopButton {
@@ -421,6 +436,7 @@ h2 {
   font-size: 1.3rem;
   background-color: #ff6a00;
 }
+
 /* POPUP CARD */
 
 /* WORKS */
@@ -568,26 +584,21 @@ h2 {
   row-gap: 1rem;
 }
 
-
-
 .card {
+  box-shadow: inset 0 -200px 300px -27px rgba(0, 0, 0, 0.8);
   background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 25.5rem;
   max-width: 35rem;
   min-width: 10rem;
   overflow: hidden;
+  border-radius: 0 6% 0 6%;
+  border-right: 3px solid #ff6b00;
 }
 
 .cardShadow {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.8687850140056023) 15%,
-    rgba(0, 0, 0, 0.2637429971988795) 80%,
-    rgba(0, 0, 0, 0) 100%
-  );
   padding: 1.5rem 0 0 0;
   height: 24rem;
   display: flex;
@@ -598,10 +609,10 @@ h2 {
   transition: all 300 ms;
 }
 
-.cardShadow:hover > .cardTitle,
+/* .cardShadow:hover > .cardTitle,
 .cardShadow:hover > .cardUl,
 .cardShadow:hover > .cardDesc {
-}
+} */
 
 .cardTitle {
   padding: 0 1rem 0 1rem;
@@ -623,7 +634,7 @@ h2 {
 .cardUl {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 0.5rem;
   padding-bottom: 1rem;
 }
 
@@ -634,6 +645,10 @@ h2 {
   color: white;
   font-size: 1rem;
   text-transform: capitalize;
+  background-color: rgba(177, 177, 177, 0.5);
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  text-align: center;
 }
 
 .cardLiAnc {
@@ -944,9 +959,11 @@ h2 {
   .popImg {
     height: 13rem;
   }
+
   #aboutTitle {
     font-size: 3rem;
   }
+
   /* FORM */
 }
 
@@ -955,15 +972,103 @@ h2 {
   .popImg {
     height: 15rem;
   }
+
   #linkPop {
     padding: 0.5rem 0.5rem;
     font-size: 1rem;
   }
+
   /* FORM */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 630px) {
+  /* SECONDARY CARD */
 
+  .sGridCont {
+    /* HOVER ALLOWED */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .card {
+    background-size: 150%;
+    transition: 700ms all ease-in-out;
+  }
+
+  .card:hover {
+    background-size: 120%;
+    background-position: 0 -2rem;
+    box-shadow: inset 53px 65px 140px -68px rgba(0, 0, 0, 1);
+  }
+
+  .cardShadow {
+    transition: 700ms all ease-in-out;
+  }
+
+  .cardTitle {
+    transition: 100ms all ease-out;
+    user-select: none;
+  }
+
+  .cardDesc {
+    transition: 500ms all ease-out;
+    user-select: none;
+  }
+
+  .cardUl {
+    transition: 900ms all ease-out;
+  }
+
+  .cardLi {
+    transform: translateX(-1.5rem);
+    font-family: "Inter", sans-serif;
+    -webkit-text-stroke: 0.25px;
+    color: white;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  .cardLiAnc {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .cardBtn {
+    transform: translateY(5rem);
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .cardBtn:hover {
+    box-shadow: 0 -2px 66px -8px rgba(0, 0, 0, 1);
+    transform: scale(1.05) !important;
+    transition: all 200ms ease-in-out;
+  }
+
+  .cardShadow:hover .cardTitle,
+  .cardShadow:hover .cardDesc,
+  .cardShadow:hover .cardUl {
+    opacity: 0;
+    transition: 300ms all ease-in;
+    user-select: none;
+  }
+
+  .cardShadow:hover .cardBtn {
+    transform: translateY(0);
+  }
+}
+
+/*
+   .btnCard {
+   }
+   */
+
+/* SECONDARY CARD */
+
+@media (min-width: 768px) {
   header {
     height: 4.5rem;
   }
@@ -1105,7 +1210,10 @@ h2 {
     padding-left: 6%;
     transform: scale(1.25);
     color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
       1px 1px 0 #000;
   }
 
@@ -1136,7 +1244,7 @@ h2 {
   /* WORKS */
 
   /* POPUP */
-  
+
   #popText {
     font-size: 1.2rem;
     line-height: 2rem;
@@ -1146,7 +1254,7 @@ h2 {
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
   }
-  
+
   /* POPUP */
 
   #worksCont {
@@ -1227,114 +1335,6 @@ h2 {
     padding: 0;
   }
 
-  /* SECONDARY CARD */
-
-  .sGridCont {
-    /* HOVER ALLOWED */
-    /*    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   row-gap: 1rem; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-  }
-
-  .card {
-    /*    background-color: rgba(0, 0, 0, 0.5);
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 25.5rem;
-   max-width: 25rem;
-   min-width: 10rem;
-   overflow: hidden; */
-  }
-
-  .cardShadow {
-    /*    background: rgb(0, 0, 0);
-   background: linear-gradient(
-     0deg,
-     rgba(0, 0, 0, 0.8687850140056023) 15%,
-     rgba(0, 0, 0, 0.2637429971988795) 80%,
-     rgba(0, 0, 0, 0) 100%
-   );
-   padding: 1.5rem 0 0 0;
-   height: 24rem;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: flex-end;
-   transform: translateY(1px);
-   transition: all 300 ms; */
-  }
-
-  .cardShadow:hover > .cardTitle,
-  .cardShadow:hover > .cardUl,
-  .cardShadow:hover > .cardDesc {
-    /*    filter: blur(500px);
-   transition: all ease-in 1000ms !important; */
-  }
-
-  .cardTitle {
-    /*    padding: 0 1rem 0 1rem;
-   margin: 0;
-   font-family: "Crete Round", serif;
-   text-transform: capitalize;
-   font-size: 2rem;
-   color: white;
-   transition: all 1000ms ease-out; */
-  }
-
-  .cardDesc {
-    /*    padding: 0 1rem 0 1rem;
-   line-height: 24px;
-   color: white;
-   font-size: 1.1rem;
-   font-family: "Inter", sans-serif;
-   transition: all 2000ms ease-out; */
-  }
-
-  .cardUl {
-    /*    display: flex;
-   flex-direction: row;
-   gap: 1.5rem;
-   padding-bottom: 1rem;
-   transition: all 3000ms ease-out; */
-  }
-
-  .cardLi {
-    /*    transform: translateX(-1.5rem);
-   font-family: "Inter", sans-serif;
-   -webkit-text-stroke: 0.25px;
-   color: white;
-   font-size: 1rem;
-   text-transform: capitalize; */
-  }
-
-  .cardLiAnc {
-    /*    font-style: none;
-   color: white;
-   text-decoration: none;
-   text-transform: lowercase; */
-  }
-
-  .cardBtn {
-    /*    width: 100%;
-   min-height: 2.75rem;
-   position: relative;
-   bottom: 0;
-   background-color: #ff6a00;
-   color: white;
-   font-size: 1rem;
-   -webkit-text-stroke: 0.3px;
-   font-family: "Inter", sans-serif;
-   border-style: none; */
-  }
-
-  /* SECONDARY CARD */
-
   .skillsLi {
     text-align: left;
   }
@@ -1369,7 +1369,10 @@ h2 {
     width: 49%;
     font-size: 1.3rem;
     line-height: 1.9rem;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
       1px 1px 0 #000;
   }
 

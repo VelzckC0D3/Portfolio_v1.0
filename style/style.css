@@ -271,8 +271,7 @@ h2 {
 }
 
 .popOn {
-  transform: scaley(1) !important;
-  opacity: 1 !important;
+  display: flex !important;
   transition: 100ms transform ease-in-out, 600ms opacity ease-in-out !important;
 }
 
@@ -280,16 +279,14 @@ h2 {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 3;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.712);
-  transform: scaleY(0);
   transform-origin: top;
-  opacity: 0;
 }
 
 .popWrapper {
@@ -336,11 +333,10 @@ h2 {
 }
 
 .popImg {
-  min-height: 37vh;
-  max-height: 50vh;
+  height: 10rem;
   background-color: rgb(152, 152, 152);
   background-size: 100%;
-  background-position: bottom;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -567,6 +563,8 @@ h2 {
   flex-direction: column;
   row-gap: 1rem;
 }
+
+
 
 .card {
   background-color: rgba(0, 0, 0, 0.5);
@@ -939,7 +937,9 @@ h2 {
 
 @media (min-width: 350px) {
   /* HEADER & MAIN TITLE */
-
+  .popImg {
+    height: 13rem;
+  }
   #aboutTitle {
     font-size: 3rem;
   }
@@ -948,6 +948,9 @@ h2 {
 
 @media (min-width: 450px) {
   /* HEADER & MAIN TITLE */
+  .popImg {
+    height: 15rem;
+  }
   #linkPop {
     padding: 0.5rem 0.5rem;
     font-size: 1rem;

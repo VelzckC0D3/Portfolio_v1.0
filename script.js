@@ -59,22 +59,6 @@ window.addEventListener("resize", () => {
 const cardObjects = [
   {
     title: "Multi-Post Stories",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
-    tech: ["HTML", "BootsTrap", "Ruby"],
-    contBG: "style/imgGrid/pGrid1.svg",
-    description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
-    seeLive: "https://velzckcode.netlify.app/",
-    seeSources: "https://github.com/VelzckC0D3",
-    class: "card6",
-  },
-  {
-    title: "Multi-Post Stories",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
     tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card0.svg",
     description:
@@ -85,9 +69,6 @@ const cardObjects = [
   },
   {
     title: "Profesional Art Printing Data More",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
     tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card1.svg",
     description:
@@ -98,9 +79,6 @@ const cardObjects = [
   },
   {
     title: "Data Dashboard Healthcare",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
     tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card2.svg",
     description:
@@ -111,9 +89,6 @@ const cardObjects = [
   },
   {
     title: "Website Portfolio",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
     tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card1.svg",
     description:
@@ -124,9 +99,6 @@ const cardObjects = [
   },
   {
     title: "Technology Innovation System",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
     tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card2.svg",
     description:
@@ -137,9 +109,6 @@ const cardObjects = [
   },
   {
     title: "Aeronautic Simulator Visualizer",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
     tech: ["HTML", "BootsTrap", "Ruby"],
     contBG: "style/imgGrid/card0.svg",
     description:
@@ -147,20 +116,17 @@ const cardObjects = [
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
     class: "card5",
-  }, 
+  },
   {
-    title: "TEST TEST TEST TEST",
-    tech1: "TEST",
-    tech2: "TEST",
-    tech3: "TEST",
-    tech: ["HTASDTML", "BootASDASDsTrap", "Ruby"],
-    contBG: "style/imgGrid/card3.svg",
+    title: "Multi-Post Stories",
+    tech: ["HTML", "BootsTrap", "Ruby"],
+    contBG: "style/imgGrid/pGrid1.svg",
     description:
-      "ASDASDASD.",
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card5",
-  }, 
+    class: "card6",
+  }
 ];
 
 /* OBJECTS */
@@ -170,54 +136,27 @@ const cardObjects = [
 const cardContainer = document.querySelector(".sGridCont"); // this, is the html path where it's going to be added.
 
 const postMethods = () => {
-  cardObjects.map((postData) => {
+  cardObjects.forEach((postData) => {
     const postElement = document.createElement("div");
     postElement.classList.add("card", postData.class);
+    postElement.style.backgroundImage = `url(${postData.contBG})`;
     postElement.innerHTML = `
-    <div class="cardShadow">
-    <style>.card:nth-child(${
-      cardObjects.indexOf(postData) + 1
-    }) {background-image: url(${postData.contBG}) !important;}</style>
-    <h2 class="cardTitle">${postData.title}</h2>
-    <p class="cardDesc">${postData.description}</p>
-    <ul class="cardUl">
-    <li class="cardLi"><a class="cardLiAnc" href="#" target="_blank" rel="noopener noreferrer">${
-      postData.tech1
-    }</a></li>
-    <li class="cardLi"><a class="cardLiAnc" href="#" target="_blank" rel="noopener noreferrer">${
-      postData.tech2
-    }</a></li>
-    <li class="cardLi"><a class="cardLiAnc" href="#" target="_blank" rel="noopener noreferrer">${
-      postData.tech3
-    }</a></li>
-    </ul>
-    <button class="cardBtn">see project</button>
-    </div>
+      <div class="cardShadow">
+      <h2 class="cardTitle">${postData.title}</h2>
+      <p class="cardDesc">${postData.description}</p>
+      <ul class="cardUl">
+      <li class="cardLi"><a class="cardLiAnc" href="#" target="_blank" rel="noopener noreferrer">${postData.tech[0]}</a></li>
+      <li class="cardLi"><a class="cardLiAnc" href="#" target="_blank" rel="noopener noreferrer">${postData.tech[1]}</a></li>
+      <li class="cardLi"><a class="cardLiAnc" href="#" target="_blank" rel="noopener noreferrer">${postData.tech[2]}</a></li>
+      </ul>
+      <button class="cardBtn">see project</button>
+      </div>
     `;
     cardContainer.appendChild(postElement);
   });
 };
+
 postMethods();
-
-/* DYNAMIC CARDS */
-
-/* POP UP HTML */
-
-concard = [
-  {
-    title: "Multi-Post Stories",
-    tech1: "HTML",
-    tech2: "BootsTrap",
-    tech3: "Ruby",
-    tech: ["HTML", "BootsTrap", "Ruby"],
-    contBG: "style/imgGrid/card0.svg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquam, laudantium quas adipisci vitae nemo exercitationem sapiente odio natus perspiciatis!",
-    seeLive: "https://velzckcode.netlify.app/",
-    seeSources: "https://github.com/VelzckC0D3",
-    class: "card6",
-  },
-];
 
 const popCont = document.querySelector(".popCont");
 
@@ -274,27 +213,30 @@ postMethods1();
 
 /* POP UP INTERACTION */
 
-const popUp = document.querySelector(".wrapperCont")
+const popUp = document.querySelector(".wrapperCont");
 const pButton = document.querySelector(".popButton1");
 const sButton = document.querySelectorAll(".cardBtn");
-const xButton = document.querySelector("#popTopButton");
+const xButton = document.querySelectorAll("#popTopButton");
 
+const baseClass = 'card';
+for (let i = 0; i < cardObjects.length; i++) {
+  const uniqueClass = baseClass + i;
+  console.log(uniqueClass);
+}
 
-pButton.addEventListener('click', () => {
-  popUp.classList.add('popOn');
+sButton.forEach((index) => {
+    index.addEventListener("click", function () {
+      popUp.classList.add("popOn")
+      const section = document.querySelector('#card3');
+      section.scrollIntoView({ behavior: "smooth" });
+    })
+})
+
+xButton.forEach((index) => {
+  index.addEventListener("click", function () {
+    popUp.classList.remove("popOn")
+  });
 });
-
-xButton.addEventListener('click', ()=> {
-  popUp.classList.remove('popOn');
-});
-
-
 
 /* POP UP INTERACTION */
-
 /* POP UP INFORMATION */
-
-for (let i = 0; i < cardObjects.length; i++) {
-  const element = cardObjects[i];
-  console.log(cardObjects[i].tech[i])
-}

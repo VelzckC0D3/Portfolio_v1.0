@@ -24,6 +24,10 @@ body {
   min-width: 100vw;
 }
 
+.no-scroll {
+  overflow: hidden !important;
+}
+
 header {
   color: rgb(255, 255, 255);
   max-width: 100vw;
@@ -266,7 +270,7 @@ h2 {
 
 /* POPUP CARD */
 
-.card6 {
+.card7 {
   display: none;
 }
 

@@ -65,7 +65,7 @@ const cardObjects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquam, laudantium quas adipisci vitae nemo exercitationem sapiente odio natus perspiciatis!",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card0",
+    class: "card1",
   },
   {
     title: "Profesional Art Printing Data More",
@@ -75,7 +75,7 @@ const cardObjects = [
       "Lorem ipsum dolor sit amet pariatur maxime expedita delectus laborum voluptates aut dolore suscipit eius illum.",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card1",
+    class: "card2",
   },
   {
     title: "Data Dashboard Healthcare",
@@ -85,7 +85,7 @@ const cardObjects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor iusto officiis sunt alias? Vero voluptatum facilis explicabo veritatis adipisci!",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card2",
+    class: "card3",
   },
   {
     title: "Website Portfolio",
@@ -95,7 +95,7 @@ const cardObjects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, exercitationem quo aliquam assumenda quam unde sint illum illo quia. Ut?",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card3",
+    class: "card4",
   },
   {
     title: "Technology Innovation System",
@@ -105,7 +105,7 @@ const cardObjects = [
       "Lorem ipsum dolor sit amet consectetur adipis maxime officiis delectus tempore fuga atque.",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card4",
+    class: "card5",
   },
   {
     title: "Aeronautic Simulator Visualizer",
@@ -115,7 +115,7 @@ const cardObjects = [
       "Voluptatem rem laboriosam laudantium vero quis maem ipsum dpisicing elit  officiis delectus tempore fuga atque.",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card5",
+    class: "card6",
   },
   {
     title: "Multi-Post Stories",
@@ -125,8 +125,8 @@ const cardObjects = [
       "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     seeLive: "https://velzckcode.netlify.app/",
     seeSources: "https://github.com/VelzckC0D3",
-    class: "card6",
-  },
+    class: "card7",
+  }
 ];
 
 /* OBJECTS */
@@ -205,25 +205,41 @@ cardObjects.map((postData, index) => {
 
 /* POP UP INTERACTION */
 
+const mainCont = document.querySelector("#body");
 const popUp = document.querySelector(".wrapperCont");
 const pButton = document.querySelector(".popButton1");
-const sButton = document.querySelectorAll(".cardBtn");
+const sButtons = document.querySelectorAll('.cardBtn');
 const xButton = document.querySelectorAll("#popTopButton");
 
-
-sButton.forEach((index) => {
-    index.addEventListener("click", function () {
-      popUp.classList.add("popOn")
-      const section = document.querySelector('');
-      section.scrollIntoView({ behavior: "smooth" });
-    })
-})
-
+// x Button on Pop Up
 xButton.forEach((index) => {
   index.addEventListener("click", function () {
     popUp.classList.remove("popOn");
+    mainCont.classList.remove("no-scroll")
   });
 });
+
+// See project First Main Project
+pButton.addEventListener('click', ()=> {
+  popUp.classList.add("popOn", "testAnimation")
+  mainCont.classList.add("no-scroll")
+  const section = document.querySelector('#card7');
+  section.scrollIntoView();
+})
+
+// See project all projects
+sButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    popUp.classList.add("popOn");
+    mainCont.classList.add("no-scroll")
+    const sectionId = `#card${index + 1}`;
+    const section = document.querySelector(sectionId);
+    console.log (sectionId)
+    section.scrollIntoView();
+  });
+});
+
+
 
 /* POP UP INTERACTION */
 /* POP UP INFORMATION */

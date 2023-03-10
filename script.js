@@ -195,10 +195,11 @@ cardObjects.map((postData, index) => {
 
 // Buttons Interaction
 const popUp = document.querySelector('.wrapperCont');
-const pButton = document.querySelector('.popButton1'); // Primary button
+const pButton = document.querySelector('.popButton1');
 const sButtons = document.querySelectorAll('.cardBtn');
 const xButton = document.querySelectorAll('.popTopButton');
 
+// Close pop up with X button
 xButton.forEach((index) => {
   index.addEventListener('click', () => {
     document.querySelector('.popWrapper').classList.add('popOut2');
@@ -207,6 +208,7 @@ xButton.forEach((index) => {
   });
 });
 
+// Action of the buttom of the primary card
 pButton.addEventListener('click', () => {
   document.querySelector('.popWrapper').classList.remove('popOut2');
   popUp.classList.add('popOn', 'testAnimation');
@@ -215,6 +217,7 @@ pButton.addEventListener('click', () => {
   section.scrollIntoView();
 });
 
+// Actions of the buttoms of the secondary cards
 sButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
     document.querySelector('.popWrapper').classList.remove('popOut2');
@@ -224,4 +227,16 @@ sButtons.forEach((button, index) => {
     const section = document.querySelector(sectionId);
     section.scrollIntoView();
   });
+});
+
+// Press ESC to close the Pop Up
+document.addEventListener('keydown', (closePopUp) => {
+  if (closePopUp.key === 'Escape') {
+    document.querySelector('.popWrapper').classList.add('popOut2');
+    setTimeout(() => { popUp.classList.remove('popOn'); }, 400); // Timeout: It'll wait '500ms' to execute the command
+    mainCont.classList.remove('no-scroll'); menuCont.classList.remove('responsiveMenu');
+    openMenu.classList.remove('displayNone');
+    closeMenu.classList.remove('display', 'xCenter');
+    logo.classList.remove('displayLogo');
+  }
 });

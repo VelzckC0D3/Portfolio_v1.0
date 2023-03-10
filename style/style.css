@@ -411,7 +411,7 @@ h2 {
 .popTitle {
   margin: 0;
   padding: 1rem 0 0 0;
-  font-size: 1.7rem;
+  font-size: 1.41rem;
   -webkit-text-stroke: 1px;
 }
 
@@ -420,18 +420,19 @@ h2 {
   height: 1rem;
   border: none;
   background-image: url(img/hamburguerX.svg);
-  background-size: 40%;
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(255, 0, 0, 0);
   cursor: pointer;
-  padding: 2rem;
+  padding: 1rem;
   transition: 500ms all ease-in-out;
+  border-radius: 5px;
 }
 
 .popTopButton:hover {
-  filter: brightness(-100%);
-  transform: rotate(360deg);
+  filter: brightness(200%);
+  background-color: #943e00;
 }
 
 .popText {
@@ -1055,6 +1056,10 @@ h2 {
     justify-content: space-evenly;
   }
 
+  .popTitle {
+    font-size: 1.7rem;
+  }
+
   .popIcon {
     font-size: 0.8rem;
   }
@@ -1358,7 +1363,7 @@ h2 {
   }
 
   .popImg:hover {
-    background-size: 135%;
+    transform: scale(1.01);
     cursor: pointer;
   }
 

@@ -1,72 +1,11 @@
-/* RESPONSIVE MENU */
-const mainCont = document.querySelector('#body');
-const openMenu = document.querySelector('#menu');
-const closeMenu = document.querySelector('#menuX');
-const menuCont = document.querySelector('#menuCont');
-const ulMenu = document.querySelector('#ulMenu');
-const liMenu = document.querySelectorAll('.liMenu');
-const logo = document.querySelector('#logo');
-const mailIcon = document.querySelector('.mailIcon');
-
-openMenu.addEventListener('click', () => {
-  menuCont.classList.add('responsiveMenu');
-  openMenu.classList.add('displayNone');
-  closeMenu.classList.add('display', 'xCenter');
-  ulMenu.classList.add('ulCenter');
-  mailIcon.classList.add('displayN');
-  logo.classList.add('displayLogo');
-  mainCont.classList.add('no-scroll');
-});
-
-closeMenu.addEventListener('click', () => {
-  menuCont.classList.remove('responsiveMenu');
-  openMenu.classList.remove('displayNone');
-  closeMenu.classList.remove('display', 'xCenter');
-  logo.classList.remove('displayLogo');
-  mainCont.classList.remove('no-scroll');
-});
-
-logo.addEventListener('click', () => {
-  menuCont.classList.remove('responsiveMenu');
-  openMenu.classList.remove('displayNone');
-  closeMenu.classList.remove('display', 'xCenter');
-  logo.classList.remove('displayLogo');
-  mainCont.classList.remove('no-scroll');
-});
-
-liMenu.forEach((each) => {
-  each.addEventListener('click', () => {
-    menuCont.classList.remove('responsiveMenu');
-    openMenu.classList.remove('displayNone');
-    closeMenu.classList.remove('display', 'xCenter');
-    logo.classList.remove('displayLogo');
-    mainCont.classList.remove('no-scroll');
-  });
-});
-
-window.addEventListener('resize', () => {
-  if (window.innerWidth < 768) {
-    menuCont.classList.remove('responsiveMenu');
-    openMenu.classList.remove('displayNone');
-    closeMenu.classList.remove('display', 'xCenter');
-    ulMenu.classList.remove('ulCenter');
-    logo.classList.remove('displayLogo');
-  }
-});
-
-/* RESPONSIVE MENU */
-
-/* POP UP INFORMATION */
-
-// Project Info Array
-
+// Card Objects
 const cardObjects = [
   {
     title: 'Multi-Post Stories',
     tech: ['HTML', 'BootsTrap', 'Ruby'],
-    contBG: 'style/imgGrid/card0.svg',
+    contBG: 'style/imgGrid/card-1.svg',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquam, laudantium quas adipisci vitae nemo exercitationem sapiente odio natus perspiciatis!',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys. orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys.',
     seeLive: 'https://velzckcode.netlify.app/',
     seeSources: 'https://github.com/VelzckC0D3',
     class: 'card1',
@@ -133,11 +72,69 @@ const cardObjects = [
   },
 ];
 
-/* OBJECTS */
+// RESPONSIVE MENU
+const mainCont = document.querySelector('#body');
+const openMenu = document.querySelector('#menu');
+const closeMenu = document.querySelector('#menuX');
+const menuCont = document.querySelector('#menuCont');
+const ulMenu = document.querySelector('#ulMenu');
+const liMenu = document.querySelectorAll('.liMenu');
+const logo = document.querySelector('#logo');
+const mailIcon = document.querySelector('.mailIcon');
 
-/* DYNAMIC CARDS */
+// Hambruguer Button Interaction
+openMenu.addEventListener('click', () => {
+  menuCont.classList.add('responsiveMenu');
+  openMenu.classList.add('displayNone');
+  closeMenu.classList.add('display', 'xCenter');
+  ulMenu.classList.add('ulCenter');
+  mailIcon.classList.add('displayN');
+  logo.classList.add('displayLogo');
+  mainCont.classList.add('no-scroll');
+});
 
-const cardContainer = document.querySelector('.sGridCont'); // this, is the html path where it's going to be added.
+// Hamburguer X Button Interaction
+closeMenu.addEventListener('click', () => {
+  menuCont.classList.remove('responsiveMenu');
+  openMenu.classList.remove('displayNone');
+  closeMenu.classList.remove('display', 'xCenter');
+  logo.classList.remove('displayLogo');
+  mainCont.classList.remove('no-scroll');
+});
+
+// Logo Button Interaction
+logo.addEventListener('click', () => {
+  menuCont.classList.remove('responsiveMenu');
+  openMenu.classList.remove('displayNone');
+  closeMenu.classList.remove('display', 'xCenter');
+  logo.classList.remove('displayLogo');
+  mainCont.classList.remove('no-scroll');
+});
+
+// List Items Interaction
+liMenu.forEach((each) => {
+  each.addEventListener('click', () => {
+    menuCont.classList.remove('responsiveMenu');
+    openMenu.classList.remove('displayNone');
+    closeMenu.classList.remove('display', 'xCenter');
+    logo.classList.remove('displayLogo');
+    mainCont.classList.remove('no-scroll');
+  });
+});
+
+// Prevent Visual Error In Certain ViewPort
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 768) {
+    menuCont.classList.remove('responsiveMenu');
+    openMenu.classList.remove('displayNone');
+    closeMenu.classList.remove('display', 'xCenter');
+    ulMenu.classList.remove('ulCenter');
+    logo.classList.remove('displayLogo');
+  }
+});
+
+// Dynamic Cards
+const cardContainer = document.querySelector('.sGridCont'); // this, is the HTML path where it's going to be added.
 
 cardObjects.forEach((postData) => {
   const createCard = document.createElement('div');
@@ -158,6 +155,7 @@ cardObjects.forEach((postData) => {
   cardContainer.appendChild(createCard);
 });
 
+// Dynamic Pop Up
 const popCont = document.querySelector('.popCont');
 
 cardObjects.map((postData, index) => {
@@ -165,62 +163,61 @@ cardObjects.map((postData, index) => {
   createPopUp.classList.add('pop', 'slider');
   createPopUp.setAttribute('id', postData.class);
   createPopUp.innerHTML = `
-    <div id="popTopCont">
-    <style>.pop:nth-child(${index + 1}) .popImg {background-image: url(${postData.contBG}) !important;}</style>
-      <div id="popTop">
-        <h2 class="roboto ">${postData.title}</h2>
-        <button type="button" id="popTopButton"></button>
+      <div id="popTopCont">
+      <style>.pop:nth-child(${index + 1}) .popImg {background-image: url(${postData.contBG}) !important;}</style>
+      <div class="popTop">
+      <h2 class="roboto popTitle">${postData.title}</h2>
+      <button type="button" class="popTopButton"></button>
       </div>
-          <ul id="ulPop">
-            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[0]}</a></li>
-            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[1]}</a></li>
-            <li class="liPop"><a href="http://" id="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[2]}</a></li>
-          </ul>
+      <ul class="ulPop">
+      <li class="liPop"><a href="http://" class="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[0]}</a></li>
+      <li class="liPop"><a href="http://" class="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[1]}</a></li>
+      <li class="liPop"><a href="http://" class="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[2]}-on-Rails</a></li>
+      </ul>
       </div>
-      <div id="popMain">
-        <div class="popImg">
-        <div class="popToggle">
-        </div>
+      <div class="popMain">
+      <div class="popImg">
+      <div class="popToggle">
       </div>
-        <p id="popText">${postData.description}</p>
-          <div id="popIconsCont">
-           <a href="${postData.seeLive}" target="_blank" rel="noopener noreferrer" class="popIcon">See Live</a>
-           <a href="${postData.seeSources}" target="_blank" rel="noopener noreferrer" class="popIcon">See Source</a>
-          </div>
-        </div>
+      </div>
+      <div class="popTextCont">
+      <p class="inter popText" >${postData.description}</p>
+      <div class="popIconsCont">
+      <a href="${postData.seeLive}" target="_blank" rel="noopener noreferrer" class="popIcon inter">See Live <img src="style/icon/live_demo.svg" alt="GitHub Icon"></a>
+      <a href="${postData.seeSources}" target="_blank" rel="noopener noreferrer" class="popIcon inter">See Source <img src="style/icon/pop_github.svg" alt="GitHub Icon"></a>
+      </div>
+      </div>
+      </div>
         `;
   popCont.appendChild(createPopUp);
   return createPopUp;
 });
 
-/* POP UP HTML */
-
-/* POP UP INTERACTION */
-
+// Buttons Interaction
 const popUp = document.querySelector('.wrapperCont');
-const pButton = document.querySelector('.popButton1');
+const pButton = document.querySelector('.popButton1'); // Primary button
 const sButtons = document.querySelectorAll('.cardBtn');
-const xButton = document.querySelectorAll('#popTopButton');
+const xButton = document.querySelectorAll('.popTopButton');
 
-// x Button on Pop Up
 xButton.forEach((index) => {
   index.addEventListener('click', () => {
-    popUp.classList.remove('popOn');
+    document.querySelector('.popWrapper').classList.add('popOut2');
+    setTimeout(() => { popUp.classList.remove('popOn'); }, 400); // Timeout: It'll wait '500ms' to execute the command
     mainCont.classList.remove('no-scroll');
   });
 });
 
-// See project First Main Project
 pButton.addEventListener('click', () => {
+  document.querySelector('.popWrapper').classList.remove('popOut2');
   popUp.classList.add('popOn', 'testAnimation');
   mainCont.classList.add('no-scroll');
   const section = document.querySelector('#card7');
   section.scrollIntoView();
 });
 
-// See project all projects
 sButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
+    document.querySelector('.popWrapper').classList.remove('popOut2');
     popUp.classList.add('popOn');
     mainCont.classList.add('no-scroll');
     const sectionId = `#card${index + 1}`;
@@ -228,16 +225,3 @@ sButtons.forEach((button, index) => {
     section.scrollIntoView();
   });
 });
-
-// Card BTN Action
-/* const cardBtn = document.querySelectorAll('.card'); // Buttons
-const cardShadow = document.querySelectorAll('.cardShadow'); // Container */
-
-/* cardShadow.forEach((card, index) => {
-  card.addEventListener('mouseover', () => {
-    cardBtn.classList.add('btnCard');
-  });
-}); */
-
-/* POP UP INTERACTION */
-/* POP UP INFORMATION */

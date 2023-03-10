@@ -240,3 +240,19 @@ document.addEventListener('keydown', (closePopUp) => {
     logo.classList.remove('displayLogo');
   }
 });
+
+// Client Side Validation
+const form = document.querySelector('#mainForm');
+const alert = document.querySelector('#alert');
+const email = document.querySelector('#email');
+
+form.addEventListener('submit', (evt) => {
+  if (email.value.toLowerCase() !== email.value) {
+    evt.preventDefault();
+    alert.textContent = 'The email must be in lowercase.';
+    alert.classList.add('alertOn');
+  } else {
+    alert.innerHTML = '';
+    alert.display.style = '';
+  }
+});

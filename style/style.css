@@ -907,8 +907,35 @@ h2 {
   margin: 0 5.8%;
 }
 
+#emailCont {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+#alert {
+  color: red;
+  font-size: 1rem;
+  transform: scaleY(1);
+  transition: 30ms all ease-in;
+  transform-origin: top;
+  margin: 1rem 0 0 0;
+  width: 86%;
+}
+
 #message {
   padding-bottom: 1rem;
+}
+
+#inputCont {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input {

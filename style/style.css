@@ -461,6 +461,7 @@ h2 {
   font-size: 0.8rem;
   text-transform: capitalize;
   -webkit-text-stroke: 0.2px;
+  cursor: default;
 }
 
 .linkPop:link,
@@ -553,7 +554,7 @@ h2 {
   height: 15.5rem;
   display: flex;
   flex-direction: column;
-  background-image: url(imgGrid/pGrid1.svg);
+  background-image: url(imgGrid/velzckshop.webp);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -1464,6 +1465,7 @@ h2 {
     width: 90%;
     padding-left: 1.3rem;
     justify-content: flex-start;
+    height: 100%;
   }
 
   #pGridTitle {
@@ -1481,6 +1483,7 @@ h2 {
   #pGridP {
     font-size: 1.08rem;
     max-width: 70%;
+    overflow-y: scroll;
   }
 
   #pTechCont li {

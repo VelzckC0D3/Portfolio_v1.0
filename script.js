@@ -61,13 +61,13 @@ const cardObjects = [
     class: 'card6',
   },
   {
-    title: 'Multi-Post Stories',
-    tech: ['HTML', 'BootsTrap', 'Ruby'],
-    contBG: 'style/imgGrid/pGrid1.svg',
+    title: 'Velzck Shop e-commerce',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    contBG: 'style/imgGrid/velzckshop.webp',
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
-    seeLive: 'https://velzckcode.netlify.app/',
-    seeSources: 'https://github.com/VelzckC0D3',
+      "This is the first e-commerce that I've developed, it showcases my skills as a designer, since all the UI / UX was created by me, it's completely responsive to any kind of device only using HTML, CSS & JavaScript with no Libraries, this was my introduction to developing websites and apps, none of the sneakers are designed / created by me.",
+    seeLive: 'https://velzckshop.netlify.app/',
+    seeSources: 'https://github.com/VelzckC0D3/Velzck_Shop',
     class: 'card7',
   },
 ];
@@ -170,9 +170,9 @@ cardObjects.map((postData, index) => {
       <button type="button" class="popTopButton"></button>
       </div>
       <ul class="ulPop">
-      <li class="liPop"><a href="http://" class="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[0]}</a></li>
-      <li class="liPop"><a href="http://" class="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[1]}</a></li>
-      <li class="liPop"><a href="http://" class="linkPop" target="_blank" rel="noopener noreferrer">${postData.tech[2]}-on-Rails</a></li>
+      <li class="liPop"><p class="linkPop">${postData.tech[0]}</p></li>
+      <li class="liPop"><p class="linkPop">${postData.tech[1]}</p></li>
+      <li class="liPop"><p class="linkPop">${postData.tech[2]}</p></li>
       </ul>
       </div>
       <div class="popMain">
